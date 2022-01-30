@@ -4,8 +4,8 @@ public class Client {
         Car bmw = CarFactory.create(CarFactory.Type.BMW);
         Car Mazda = CarFactory.create(CarFactory.Type.MAZDA);
 
-        audi.go();
-        bmw.go();
-        Mazda.go();
+        audi.run();
+        bmw.run();
+        Mazda.run();
     }
 }

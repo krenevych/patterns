@@ -11,14 +11,18 @@ public class Car {
         this.weight = weight;
     }
 
+    public void run(){
+        System.out.println(String.format("run: %s", mark));
+    }
+
     /* Статичний фабричний метод  */
     public static Car createMazda(){
         return new Car("Mazda", 165, 198, 1500);
     }
 
     /* Статичний фабричний метод  */
-    public static Car createWV(){
-        return new Car("WV", 140, 179, 100);
+    public static Car createBMW(){
+        return new Car("BMW", 140, 179, 100);
     }
 
     @Override
