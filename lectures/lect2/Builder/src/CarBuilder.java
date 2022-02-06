@@ -11,7 +11,7 @@ public class CarBuilder {
 
     public CarBuilder reset() {
         carType = Car.Type.Sedan;
-        engine = new Engine(Engine.Type.petrol, 120, 2400, 1.2f);
+        engine = new Engine(Engine.Type.petrol, 120, 160, 1.2f);
         wheel = new Wheel(Wheel.DiskMaterial.steel, 14);
         carColor = Car.CarColor.White;
         return this;

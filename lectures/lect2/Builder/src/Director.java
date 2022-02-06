@@ -12,7 +12,7 @@ public class Director {
         return carBuilder
                 .reset()
                 .setCarType(Car.Type.SUV)
-                .setEngine(new Engine(Engine.Type.diesel, 198, 5400, 2.5f))
+                .setEngine(new Engine(Engine.Type.diesel, 198, 420, 2.2f))
                 .setWheel(new Wheel(Wheel.DiskMaterial.forged, 19))
                 .setCarColor(Car.CarColor.Black)
                 .build();
@@ -22,7 +22,7 @@ public class Director {
         return carBuilder
                 .reset()
                 .setCarType(Car.Type.Hatchback)
-                .setEngine(new Engine(Engine.Type.petrol, 385, 5400, 4.5f))
+                .setEngine(new Engine(Engine.Type.petrol, 385, 540, 4.5f))
                 .setWheel(new Wheel(Wheel.DiskMaterial.forged, 22))
                 .setCarColor(Car.CarColor.Red)
                 .build();
