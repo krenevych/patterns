@@ -1,4 +1,3 @@
-package com.company;
 
 public interface Drone {
     void beep();

@@ -1,5 +1,3 @@
-package com.company;
-
 public class SuperDrone implements Drone {
     public void beep() {
         System.out.println("Beep beep beep");
