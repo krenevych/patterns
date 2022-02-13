@@ -3,19 +3,16 @@ package com.vehiclecalculator;
 public class CarCalculator implements VehicleCalculator {
 
     public static int averageCarPrice = 6000;
+    private Vehicle vehicle;
 
-    private final int age;
-    private final String model;
-    private final float damage;
 
-    public CarCalculator(String model, int age, int damage) {
-        this.model = model;
-        this.age = age;
-        this.damage = damage;
+    public CarCalculator() {
     }
 
     public int getRetailPrice() {
-        switch (model) {
+        assert vehicle != null;
+
+        switch (vehicle.getModel()) {
             case "Ford":
                 return 3000;
             case "Audi":
@@ -30,8 +27,14 @@ public class CarCalculator implements VehicleCalculator {
     }
 
     @Override
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    @Override
     public String calculatePrice() {
-        int price = (int) (damage * Math.max(getRetailPrice() - (age * 100), 0));
+        assert vehicle != null;
+        int price = (int) (vehicle.getDamage() * Math.max(getRetailPrice() - (vehicle.getAge() * 100), 0));
         return price + "USD";
     }
 
