@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        MobilePhone mobilePhone = new MobilePhone();
+//        MobilePhone mobilePhone = new MobilePhone();
 //        System.out.println(String.format("Рівень заряду: %s%%", mobilePhone.getPercentCharging()));
 //        mobilePhone.call(10);
-        Charger chargerMicroUsb = new Charger(5.0f, 1.0f);
-        mobilePhone.pluginCharger(chargerMicroUsb);
+//        Charger chargerMicroUsb = new Charger(5.0f, 1.0f);
+//        mobilePhone.pluginCharger(chargerMicroUsb);
 //        mobilePhone.charge(180);
 //        System.out.println(String.format("Рівень заряду: %s%%", mobilePhone.getPercentCharging()));
 //        mobilePhone.call(10);
@@ -19,11 +19,25 @@ public class Main {
         samsungS22Ultra.charge(50);
 
         System.out.println(String.format("Рівень заряду: %s%%", samsungS22Ultra.getPercentCharging()));
-        samsungS22Ultra.call(30);
+        samsungS22Ultra.call(180);
         System.out.println(String.format("Рівень заряду: %s%%", samsungS22Ultra.getPercentCharging()));
         samsungS22Ultra.unplug();
 
-//        samsungS22Ultra.plugin(chargerMicroUsb);
+        Charger chargerMicroUsb = new Charger(5.0f, 1.0f);
+        AdapterMicroUsbToTypeC adapterMicroUsbToTypeC = new AdapterMicroUsbToTypeC(chargerMicroUsb);
+        samsungS22Ultra.plugin(adapterMicroUsbToTypeC);
+        samsungS22Ultra.charge(20);
+        System.out.println(String.format("Рівень заряду: %s%%", samsungS22Ultra.getPercentCharging()));
+
+//        AdapterMicroUsbToTypeC_inharitance adapterMicroUsbToTypeC2 = new AdapterMicroUsbToTypeC_inharitance(5.0f, 1.0f);
+//        samsungS22Ultra.plugin(adapterMicroUsbToTypeC2);
+
+        MobilePhone mobilePhone = new MobilePhone();
+        System.out.println(String.format("Рівень заряду: %s%%", mobilePhone.getPercentCharging()));
+        mobilePhone.pluginCharger(new AdapterTypeCToMicroUsb(chargerSamsungS22));
+        mobilePhone.charge(10);
+        System.out.println(String.format("Рівень заряду: %s%%", mobilePhone.getPercentCharging()));
+
 
     }
 }

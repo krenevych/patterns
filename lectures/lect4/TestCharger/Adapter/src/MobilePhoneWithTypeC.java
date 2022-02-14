@@ -30,12 +30,15 @@ public class MobilePhoneWithTypeC {
     }
 
     public void call(int minutes) {
-        if (percentCharging < minutes){
+
+        int predictedPowerConsumption = minutes / 5;
+
+        if (percentCharging < predictedPowerConsumption){
             System.out.println("Заряду не достатньо для здійснення дзвінка!");
             return;
         }
         System.out.println("Calling...");
-        percentCharging -= minutes / 5;
+        percentCharging -= predictedPowerConsumption;
     }
 
 }
