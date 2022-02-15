@@ -22,7 +22,8 @@ public class MobilePhoneWithTypeC {
         if (percentCharging > 100){
             percentCharging = 100;
         }
-
+        System.out.println("Charging...");
+        showPowerLevel();
     }
 
     public void unplug(){
@@ -39,6 +40,12 @@ public class MobilePhoneWithTypeC {
         }
         System.out.println("Calling...");
         percentCharging -= predictedPowerConsumption;
+
+        showPowerLevel();
+    }
+
+    public void showPowerLevel(){
+        System.out.println(String.format("Рівень заряду: %s%%", getPercentCharging()));
     }
 
 }
