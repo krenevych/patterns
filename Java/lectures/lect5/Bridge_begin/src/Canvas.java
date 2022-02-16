@@ -13,7 +13,7 @@ public class Canvas extends JPanel {
         frame.setVisible(true);
     }
 
-
+    @Override
     public void paint(Graphics graphics) {
         Square square = new BlueSquare();
         square.draw(graphics);
