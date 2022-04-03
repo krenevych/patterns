@@ -3,9 +3,9 @@ import java.awt.*;
 
 public class Canvas extends JPanel {
 
-    private Component circle1;
-    private Component circle2;
-    private Component circle3;
+    private Circle circle1;
+    private Circle circle2;
+    private Circle circle3;
 
     public Canvas() {
         circle1 = new Circle(60, 60, 50);
