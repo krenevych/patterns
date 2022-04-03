@@ -1,11 +1,10 @@
-public class StringComponent implements Component{
+public class PrintableString {
     private final String base;
 
-    public StringComponent(String base) {
+    public PrintableString(String base) {
         this.base = base;
     }
 
-    @Override
     public void print() {
         System.out.print(base);
     }

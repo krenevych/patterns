@@ -1,7 +1,7 @@
-public class StringComponent implements Component{
+public class PrintableString implements Component {
     private final String base;
 
-    public StringComponent(String base) {
+    public PrintableString(String base) {
         this.base = base;
     }
 
