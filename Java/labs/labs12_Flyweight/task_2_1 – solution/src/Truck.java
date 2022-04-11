@@ -13,7 +13,7 @@ public class Truck implements Vehicle {
   }
 
   @Override
-  public String getTask() {
+  public String runTask(int latitude, int longitude) {
     return "Transportation of goods to the destination: (" + latitude + ", " + longitude + ")";
   }
 

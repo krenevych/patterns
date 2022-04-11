@@ -1,6 +1,4 @@
 public interface Vehicle {
-
   String getType();
-  void target(int latitude, int longitude);
-  String getTask();
+  String runTask(int latitude, int longitude);
 }

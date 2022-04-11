@@ -5,8 +5,6 @@ import java.util.concurrent.TimeUnit;
 
 public class TrafficSimulator {
 
-  static VehicleFactory vehicleFactory = new VehicleFactory();
-
   public static void main(String[] args) {
 
     Runnable createVehicles = new Runnable() {
@@ -19,12 +17,12 @@ public class TrafficSimulator {
     executor.scheduleAtFixedRate(createVehicles, 0, 2, TimeUnit.SECONDS);
   }
 
+  static VehicleFactory vehicleFactory = new VehicleFactory();
   private static void createRandomCar() {
     Random random = new Random();
     int randInt = random.nextInt(2);
     Vehicle vehicle = vehicleFactory.getVehicle(randInt);
-    vehicle.target(random.nextInt(1000), random.nextInt(1000));
-    System.out.println("Creating " + vehicle + ", type: " + vehicle.getType() + ", task: " + vehicle.getTask());
+    System.out.println("Creating " + vehicle + ", type: " + vehicle.getType() + ", task: " + vehicle.runTask(random.nextInt(1000), random.nextInt(1000)));
   }
 
 
