@@ -26,8 +26,8 @@ public class TrafficSimulator {
     } else {
       vehicle = new Truck();
     }
-    vehicle.target(random.nextInt(1000), random.nextInt(1000));
-    System.out.println("Creating " + vehicle + ", type: " + vehicle.getType() + ", task: " + vehicle.getTask());
+
+    System.out.println("Creating " + vehicle + ", type: " + vehicle.getType() + ", task: " + vehicle.runTask(random.nextInt(1000), random.nextInt(1000)));
   }
 
 
