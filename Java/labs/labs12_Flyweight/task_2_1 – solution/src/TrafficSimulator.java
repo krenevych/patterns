@@ -7,14 +7,14 @@ public class TrafficSimulator {
 
   public static void main(String[] args) {
 
-    Runnable createVehicles = new Runnable() {
+    Runnable useVehicle = new Runnable() {
       public void run() {
         createRandomCar();
       }
     };
 
     ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
-    executor.scheduleAtFixedRate(createVehicles, 0, 2, TimeUnit.SECONDS);
+    executor.scheduleAtFixedRate(useVehicle, 0, 2, TimeUnit.SECONDS);
   }
 
   static VehicleFactory vehicleFactory = new VehicleFactory();
