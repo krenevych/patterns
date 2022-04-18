@@ -1,3 +1,4 @@
 public interface Handler {
-    void setProperty();
+    void open(String fileName);
+    void setNext(Handler handler);
 }
