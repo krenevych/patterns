@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Image {
 
@@ -29,6 +31,14 @@ public class Image {
         this.camera = camera;
     }
 
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public void setCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+    }
+
     public String getName() {
         return name;
     }
@@ -41,16 +51,8 @@ public class Image {
         return creationDate;
     }
 
-    public void setCreationDate(String creationDate) {
-        this.creationDate = creationDate;
-    }
-
     public String getCreationTime() {
         return creationTime;
-    }
-
-    public void setCreationTime(String creationTime) {
-        this.creationTime = creationTime;
     }
 
     @Override
