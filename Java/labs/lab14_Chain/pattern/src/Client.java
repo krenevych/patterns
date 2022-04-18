@@ -1,24 +1,25 @@
 public class Client {
     public static void main(String[] args) {
-        Handler handler1 = new ConcreteHandler(Request.Type.Type1);
-        Handler handler2 = new ConcreteHandler(Request.Type.Type2);
-        Handler handler3 = new ConcreteHandler(Request.Type.Type3);
-        Handler handler4 = new ConcreteHandler(Request.Type.Type4);
-        Handler handler5 = new ConcreteHandler(Request.Type.Type5);
 
-        handler1.setNext(handler2);
-        handler2.setNext(handler3);
-        handler3.setNext(handler4);
-        handler4.setNext(handler5);
+        // Створюємо елементи ланцюжка
+        Handler handlerType1 = new HandlerType1();
+        Handler handlerType2 = new HandlerType2();
+        Handler handlerType3 = new HandlerType3();
 
-        Request request1 = new Request(Request.Type.Type1);
-        Request request2 = new Request(Request.Type.Type2);
-        Request request3 = new Request(Request.Type.Type3);
-        Request request6 = new Request(Request.Type.Type6);
-        handler1.handle(request1);
-        handler1.handle(request2);
-        handler1.handle(request3);
-        handler1.handle(request6);
+        // Пов'язуємо елементи у ланцюжок обов'язків
+        handlerType1.setNext(handlerType2);
+        handlerType2.setNext(handlerType3);
 
+//        Request request = new Request(Request.Type.TYPE1);
+//        handlerType1.handle(request);
+//
+//        Request request2 = new Request(Request.Type.TYPE2);
+//        handlerType1.handle(request2);
+
+//        Request request3 = new Request(Request.Type.TYPE3);
+//        handlerType1.handle(request3);
+
+        Request request4 = new Request(Request.Type.TYPE4);
+        handlerType1.handle(request4);
     }
 }

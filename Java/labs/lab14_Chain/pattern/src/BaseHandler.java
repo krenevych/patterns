@@ -3,7 +3,7 @@ public class BaseHandler implements Handler {
 
     @Override
     public void setNext(Handler handler) {
-        this.next = handler;
+        next = handler;
     }
 
     @Override
@@ -11,7 +11,7 @@ public class BaseHandler implements Handler {
         if (next != null){
             next.handle(request);
         } else {
-            System.out.println(request.getType() + " - unhandled request!");
+            System.out.println("Unhandled request " + request);
         }
     }
 }

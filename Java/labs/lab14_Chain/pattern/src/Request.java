@@ -1,21 +1,31 @@
+import java.util.Random;
+
 public class Request {
-    public Request(Type type) {
-        this.type = type;
-    }
-
     enum Type {
-        Type1,
-        Type2,
-        Type3,
-        Type4,
-        Type5,
-        Type6,
+        TYPE1,
+        TYPE2,
+        TYPE3,
+        TYPE4,
     }
-
-    private final Type type;
 
     public Type getType() {
         return type;
     }
 
+    private final Type type;
+    private final long id;
+
+    public Request(Type type) {
+        this.type = type;
+        Random random = new Random();
+        id = random.nextInt();
+    }
+
+    @Override
+    public String toString() {
+        return "Request{" +
+                "type=" + type +
+                ", id=" + id +
+                '}';
+    }
 }
