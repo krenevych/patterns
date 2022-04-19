@@ -1,29 +1,58 @@
 public class TextEditor {
-    public static void main(String[] args) {
 
-        Document document = new Document("blank");
+    private Document document;
 
-        Button saveButton = new Button();
-        Button printButton = new Button();
+    final private Button saveButton;
+    final private Button printButton;
 
-        MenuItem saveMenuItem = new MenuItem();
-        MenuItem printMenuItem = new MenuItem();
-        MenuItem showInfoMenuItem = new MenuItem();
+    final private MenuItem saveMenuItem;
+    final private MenuItem printMenuItem;
+    final private MenuItem showInfoMenuItem;
 
-        Shortcut saveShortcut = new Shortcut();
-        Shortcut printShortcut = new Shortcut();
+    final private Shortcut saveShortcut;
+    final private Shortcut printShortcut;
 
-        /////////////////////////////////////////////
-        // Testing buttons, menu items, shortcuts...
-        //////////////////////////////////////////////
+    public TextEditor() {
+        saveButton = new Button();
+        printButton = new Button();
+
+        saveMenuItem = new MenuItem();
+        printMenuItem = new MenuItem();
+        showInfoMenuItem = new MenuItem();
+
+        saveShortcut = new Shortcut();
+        printShortcut = new Shortcut();
+    }
+
+    public void newDocument(String name) {
+        document = new Document(name);
+    }
+
+    public void clickSaveButton() {
         saveButton.click();
+    }
+
+    public void clickPrintButton() {
         printButton.click();
+    }
 
+    public void selectSaveMenuItem() {
         saveMenuItem.select();
-        printMenuItem.select();
-        showInfoMenuItem.select();
+    }
 
+    public void selectPrintMenuItem() {
+        printMenuItem.select();
+    }
+
+    public void selectShowInfoMenuItem() {
+        showInfoMenuItem.select();
+    }
+
+    public void pressSaveShortcut() {
         saveShortcut.press();
+    }
+
+    public void pressPrintShortcut() {
         printShortcut.press();
     }
 }
