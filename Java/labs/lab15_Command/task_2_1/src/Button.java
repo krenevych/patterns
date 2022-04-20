@@ -1,4 +1,4 @@
 public class Button {
-    void click(){
+    public void click(){
     }
 }

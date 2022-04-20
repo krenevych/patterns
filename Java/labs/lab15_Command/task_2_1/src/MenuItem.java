@@ -1,4 +1,4 @@
 public class MenuItem {
-    void select(){
+    public void select() {
     }
 }

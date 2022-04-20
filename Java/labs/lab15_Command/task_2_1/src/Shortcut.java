@@ -1,4 +1,4 @@
 public class Shortcut {
-    void press(){
+    public void press() {
     }
 }
