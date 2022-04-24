@@ -1,8 +1,9 @@
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class CollectionIntegers {
+public class CollectionIntegers implements Iterable<Integer>{
 
     private final List<Integer> array = new ArrayList<>();
 
@@ -31,4 +32,8 @@ public class CollectionIntegers {
     }
 
 
+    @Override
+    public Iterator<Integer> iterator() {
+        return new IntegerIterator(this);
+    }
 }
