@@ -1,6 +1,13 @@
 public class ConcreteUser implements User {
 
     final private String userId;
+    private Chat chat;
+
+
+    public void setChat(Chat chat) {
+        this.chat = chat;
+    }
+
 
     public ConcreteUser(String userId) {
         this.userId = userId;
@@ -8,12 +15,12 @@ public class ConcreteUser implements User {
 
     @Override
     public void sendMessageAll(String message) {
-
+        chat.sendMessageAll(message, userId);
     }
 
     @Override
     public void sendMessage(String message, String userTo) {
-
+        chat.sendMessage(message, userId, userTo);
     }
 
     @Override
