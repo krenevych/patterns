@@ -1,30 +1,27 @@
+
 public class WeatherDataCenter {
 
-    final private String location;
+    final private WeatherReader weatherReader;
 
-    private float temperature; // температура повітря
-    private float humidity;    // вологість повітря
-    private float pressure;    // атмосферний тиск
-
-    public WeatherDataCenter(String location) {
-        this.location = location;
+    public WeatherDataCenter() {
+        weatherReader = new WeatherReader("resources/input01.txt");
     }
 
-    public void setMeasurements(float temperature, float humidity, float pressure) {
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.pressure = pressure;
-    }
+    public boolean update() {
+        WeatherEvent weatherEvent = weatherReader.getEvent();
+        if (weatherEvent == null){
+            return false;
+        }
 
-    public float getTemperature() {
-        return temperature;
-    }
+        if (weatherEvent.getLocation().equals("end")){
+            return true;
+        }
 
-    public float getHumidity() {
-        return humidity;
-    }
+        System.out.println("Update data: city: " + weatherEvent.getLocation()
+                + ", temperature = " + weatherEvent.getTemperature()
+                + ", humidity = " + weatherEvent.getHumidity()
+                + ", pressure = " + weatherEvent.getPressure());
 
-    public float getPressure() {
-        return pressure;
+        return false;
     }
 }
