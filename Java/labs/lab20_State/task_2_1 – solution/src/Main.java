@@ -7,3 +7,7 @@ public class Main {
     }
 
 }
+
+
+// Video playing, icon set to pause button
+// Video paused, icon set to play button
