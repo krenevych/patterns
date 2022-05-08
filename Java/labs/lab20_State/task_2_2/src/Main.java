@@ -20,11 +20,5 @@ public class Main {
         mediaPlayer.play();
         mediaPlayer.stop();
 
-
     }
-
 }
-
-
-// Video playing, icon set to pause button
-// Video paused, icon set to play button

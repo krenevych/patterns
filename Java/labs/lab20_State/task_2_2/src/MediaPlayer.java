@@ -4,7 +4,7 @@ import java.util.List;
 public class MediaPlayer {
 
     List<String> tracks = new ArrayList<>();
-    private State state = new StateStopped();
+    private State state;
     private int currentTrackNum = 0;
 
 
@@ -13,7 +13,7 @@ public class MediaPlayer {
     }
 
     public void setTrackNum(int trackNum) {
-        if (trackNum >= tracks.size()){
+        if (trackNum >= tracks.size()) {
             return;
         }
 
@@ -28,7 +28,7 @@ public class MediaPlayer {
         return tracks;
     }
 
-    public void addTrack(String track){
+    public void addTrack(String track) {
         tracks.add(track);
     }
 
@@ -41,23 +41,23 @@ public class MediaPlayer {
     }
 
     public void play() {
-        state.play(this);
+
     }
 
     public void pause() {
-        state.pause(this);
+
     }
 
-    public void next(){
-        state.next(this);
+    public void next() {
+
     }
 
-    public void prev(){
-        state.prev(this);
+    public void prev() {
+
     }
 
     public void stop() {
-        state.stop(this);
+
     }
 
 }
