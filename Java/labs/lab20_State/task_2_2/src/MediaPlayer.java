@@ -3,7 +3,7 @@ import java.util.List;
 
 public class MediaPlayer {
 
-    List<String> tracks = new ArrayList<>();
+    final private List<String> tracks = new ArrayList<>();
     private State state;
     private int currentTrackNum = 0;
 
@@ -13,7 +13,7 @@ public class MediaPlayer {
     }
 
     public void setTrackNum(int trackNum) {
-        if (trackNum >= tracks.size()) {
+        if (trackNum < 0 || trackNum >= tracks.size()) {
             return;
         }
 
