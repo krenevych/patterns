@@ -3,19 +3,18 @@ public class Context {
 
     public Context(State initialState) {
         this.state = initialState;
-//        state.
     }
 
-    public void chandeState(State state){
-
+    public void changeState(State state){
+        this.state = state;
     }
 
     public void doThis(){
-        state.doThis();
+        state.doThis(this);
     }
 
     public void doThat(){
-        state.doThat();
+        state.doThat(this);
     }
 
 

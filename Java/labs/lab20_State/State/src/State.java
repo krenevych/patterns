@@ -1,4 +1,4 @@
 public interface State {
-    void doThis();
-    void doThat();
+    void doThis(Context context);
+    void doThat(Context context);
 }
