@@ -1,63 +1,46 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class MediaPlayer {
 
-    final private List<String> tracks = new ArrayList<>();
-    private State state;
-    private int currentTrackNum = 0;
+    private String state = "paused";
+    private String icon = "play button";
 
-
-    public String getCurrentTrack() {
-        return tracks.get(currentTrackNum);
-    }
-
-    public void setTrackNum(int trackNum) {
-        if (trackNum < 0 || trackNum >= tracks.size()) {
-            return;
-        }
-
-        this.currentTrackNum = trackNum;
-    }
-
-    public int getCurrentTrackNum() {
-        return currentTrackNum;
-    }
-
-    public List<String> getTracks() {
-        return tracks;
-    }
-
-    public void addTrack(String track) {
-        tracks.add(track);
-    }
-
-    public void setState(State state) {
+    public void setState(String state) {
         this.state = state;
     }
 
-    public State getState() {
+    public String getState() {
         return state;
     }
 
-    public void play() {
+    public String getIcon() {
+        return icon;
+    }
 
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public void play() {
+        switch (state) {
+            case "paused":
+                setState("playing");
+                setIcon("pause button");
+                System.out.println("Video playing, icon set to " + getIcon());
+                break;
+            case "playing":
+                break;
+        }
     }
 
     public void pause() {
-
-    }
-
-    public void next() {
-
-    }
-
-    public void prev() {
-
-    }
-
-    public void stop() {
-
+        switch (state) {
+            case "paused":
+                break;
+            case "playing":
+                setState("paused");
+                setIcon("play button");
+                System.out.println("Video paused, icon set to " + getIcon());
+                break;
+        }
     }
 
 }
