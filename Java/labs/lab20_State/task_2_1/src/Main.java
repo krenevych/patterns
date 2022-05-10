@@ -4,6 +4,9 @@ public class Main {
         MediaPlayer mediaPlayer = new MediaPlayer();
         mediaPlayer.play();
         mediaPlayer.pause();
+        mediaPlayer.pause();
+        mediaPlayer.play();
+        mediaPlayer.play();
     }
 
 }
