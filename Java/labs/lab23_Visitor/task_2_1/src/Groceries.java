@@ -1,5 +1,5 @@
 public interface Groceries {
 
-  double getPrice();
+    double getPrice();
 
 }
