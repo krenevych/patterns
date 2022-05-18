@@ -2,17 +2,16 @@ import java.util.ArrayList;
 
 public class GroceryList implements Groceries {
 
-    ArrayList<Groceries> groceries = new ArrayList<Groceries>();
+    private final ArrayList<Groceries> groceries = new ArrayList<>();
 
     public GroceryList() {
-        Bread bread = new Bread();
-        Bread bread2 = new Bread();
-        Milk milk = new Milk();
-        groceries.add(bread);
-        groceries.add(milk);
-        groceries.add(bread2);
     }
 
+    void add(Groceries grocery){
+        groceries.add(grocery);
+    }
+
+    @Override
     public double getPrice() {
         double sum = 0.0;
         for (Groceries grocery : groceries) {
@@ -23,9 +22,9 @@ public class GroceryList implements Groceries {
 
     @Override
     public void accept(Visitor visitor) {
+        visitor.visit(this);
         for (Groceries grocery : groceries) {
             grocery.accept(visitor);
         }
     }
-
 }
