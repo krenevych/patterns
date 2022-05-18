@@ -1,11 +1,16 @@
 public class SalesPerson implements Employee {
 
-    private int salary = 50000;
+    private int salary;
 
-    public void setSalary(int price) {
+    public SalesPerson(int salary) {
         this.salary = salary;
     }
 
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    @Override
     public int getSalary() {
         return salary;
     }
