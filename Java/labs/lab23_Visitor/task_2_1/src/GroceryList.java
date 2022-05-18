@@ -11,6 +11,7 @@ public class GroceryList implements Groceries {
         groceries.add(grocery);
     }
 
+    @Override
     public double getPrice() {
         double sum = 0.0;
         for (Groceries grocery : groceries) {

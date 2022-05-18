@@ -6,6 +6,7 @@ public class Bread implements Groceries {
         this.price = price;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }

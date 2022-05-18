@@ -6,6 +6,7 @@ public class Milk implements Groceries {
         this.price = price;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
