@@ -1,17 +1,26 @@
-public class Canvas {
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-  public static void main(String[] args) {
+public class Canvas extends JPanel {
 
-    CheckboxButton checkboxButton = new CheckboxButton(new SmallControlSize());
-    checkboxButton.draw();
+    public static void main(String[] a) {
+        // Creates a canvas to draw on
+        JFrame frame = new JFrame();
+        frame.setSize(400, 400);
+        frame.add(new Canvas());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
 
-    RadioButton radioButton = new RadioButton(new MediumControlSize());
-    radioButton.draw();
-
-    DropdownButton dropdownButton = new DropdownButton(new LargeControlSize());
-    dropdownButton.draw();
-
-
-  }
+    @Override
+    public void paint(Graphics graphics) {
+        Square square = new Square(new BlueShapeColor());
+        square.draw(graphics);
+        Circle circle = new Circle(new RedShapeColor());
+        circle.draw(graphics);
+        Triangle triangle = new Triangle(new GreenShapeColor());
+        triangle.draw(graphics);
+    }
 
 }
