@@ -1,19 +1,46 @@
+import com.mobile.Legacy.Charger;
+import com.mobile.Legacy.MobilePhone;
+
 public class Main {
 
     public static void main(String[] args) {
-        WeatherWarnings weatherWarnings = new WeatherWarnings();
+        SamsungS22 samsungS22 = new SamsungS22();
+        samsungS22.makeCall();
 
-        NorthAmericanCity chicago = new NorthAmericanCity("Chicago", 16);
-        weatherWarnings.postWarning(chicago);
+        FastCharge fastCharge = new FastCharge(18);
 
-        NorthAmericanCity phoenix = new NorthAmericanCity("Phoenix", 104);
-        weatherWarnings.postWarning(phoenix);
+        samsungS22.pluginCharger(fastCharge);
+        samsungS22.charge(30);
+        printBatteryStatus(samsungS22);
+        samsungS22.makeCall();
+        printBatteryStatus(samsungS22);
+        samsungS22.unplugCharger();
+        samsungS22.charge(10);
+        printBatteryStatus(samsungS22);
 
-        NorthAmericanCity portland = new NorthAmericanCity("Portland", 70);
-        weatherWarnings.postWarning(portland);
+        Charger charger = new Charger(5.0f, 1.0f);
+        AdapterMicroUsbToTypeC adapterMicroUsbToTypeC = new AdapterMicroUsbToTypeC(charger);
 
-        AsianCity bangkok = new AsianCity("Bangkok", 50);
-        weatherWarnings.postWarning(bangkok);
+        System.out.println("Charging throughout first adapter");
+        samsungS22.pluginCharger(adapterMicroUsbToTypeC);
+        samsungS22.charge(10);
+        printBatteryStatus(samsungS22);
+
+        System.out.println("Maintaining legacy charging");
+
+        MobilePhone phone = new MobilePhone();
+        phone.pluginCharger(charger);
+        phone.charge(20);
+        System.out.printf("Current power status = %s%n", phone.getChargingPercent());
+
+        phone.pluginCharger(new AdapterTypeCToMicroUsb(fastCharge));
+        phone.charge(20);
+        System.out.printf("Current power status = %s%n", phone.getChargingPercent());
+
+    }
+
+    private static void printBatteryStatus(SamsungS22 phone){
+        System.out.printf("Current battery status = %s%n", phone.getChargingPercent());
     }
 
 }
