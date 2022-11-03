@@ -1,6 +1,4 @@
 #include <iostream>
-
-
 using namespace std;
 
 class Logger {
@@ -11,6 +9,10 @@ public:
             instance = new Logger();
         }
         return *instance;
+    }
+
+    void log(const string& message){
+        cout << message << "\n";
     }
 
     Logger(const Logger &) = delete;
@@ -26,14 +28,15 @@ private:
         cout << "Destroed\n";
     }
 
-    static Logger *instance;
+    static Logger* instance;
 };
+
+Logger* Logger::instance;
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-//    Logger& logger =
-            Logger::getInstance();
+    Logger::getInstance().log("Hello");
 
     return 0;
 }
