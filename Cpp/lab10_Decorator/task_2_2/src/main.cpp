@@ -8,10 +8,10 @@ int main()
   using namespace std;
 
   ThickCrustPizza thick_pizza = ThickCrustPizza();
-  std::cout << thick_pizza.toString() << std::endl;
+  cout << thick_pizza.toString() << endl;
 
   ThinCrustPizza thin_pizza = ThinCrustPizza();
-  std::cout << thin_pizza.toString() << std::endl;
+  cout << thin_pizza.toString() << endl;
 
   return 0;
 }
