@@ -12,13 +12,6 @@ int main()
 {
   using namespace std;
 
-  default_random_engine generator;
-  uniform_int_distribution<int> car_type_distr(0, 3);
-  uniform_int_distribution<int> car_color_distr(0, 4);
-  uniform_int_distribution<int> fuel_distr(0, 3);
-  uniform_int_distribution<int> wheel_diameter_distr(17, 20);
-  uniform_int_distribution<int> power_distr(11, 15);
-
   CarBuilder* carBuilder = new CarBuilder();
   Car* car;
 
@@ -42,6 +35,14 @@ int main()
     Engine::Fuel::Diesel,
     Engine::Fuel::Electric
   };
+
+  default_random_engine generator;
+  uniform_int_distribution<int> car_type_distr(0, carTypes.size() - 1);
+  uniform_int_distribution<int> car_color_distr(0, carColors.size() - 1);
+  uniform_int_distribution<int> fuel_distr(0, fuels.size() - 1);
+  uniform_int_distribution<int> wheel_diameter_distr(17, 20);
+  uniform_int_distribution<int> power_distr(11, 15);
+
 
   for (size_t ind = 0; ind != 12; ++ind)
   {
