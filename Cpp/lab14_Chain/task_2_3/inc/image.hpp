@@ -15,15 +15,16 @@ public:
 
   Image();
   ~Image();
-  Type getType();
+  Type getType() const;
+  std::string getTypeString() const;
   void setType(Type);
-  std::string getCamera();
+  std::string getCamera() const;
   void setCamera(std::string);
-  std::string getName();
+  std::string getName() const;
   void setName(std::string);
-  std::string getCreationDate();
+  std::string getCreationDate() const;
   void setCreationDate(std::string);
-  std::string getCreationTime();
+  std::string getCreationTime() const;
   void setCreationTime(std::string);
 
   friend std::ostream& operator<<(std::ostream&, Image const&);
