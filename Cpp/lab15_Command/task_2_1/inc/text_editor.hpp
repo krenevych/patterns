@@ -24,13 +24,13 @@ public:
 private:
   Document* document;
 
-  Button const saveButton;
-  Button const printButton;
+  Button saveButton;
+  Button printButton;
 
-  MenuItem const saveMenuItem;
-  MenuItem const printMenuItem;
-  MenuItem const showInfoMenuItem;
+  MenuItem saveMenuItem;
+  MenuItem printMenuItem;
+  MenuItem showInfoMenuItem;
 
-  Shortcut const saveShortcut;
-  Shortcut const printShortcut;
+  Shortcut saveShortcut;
+  Shortcut printShortcut;
 };
