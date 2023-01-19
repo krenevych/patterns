@@ -13,9 +13,9 @@ int main()
   integers.add(131);
   integers.add(140);
 
-//  for (auto& integer: integers)
+//  for (auto iter = integers.iterator(); iter.hasNext();)
 //  {
-//    std::cout << integer << std::endl;
+//    std::cout << iter++ << std::endl;
 //  }
 
   return 0;
