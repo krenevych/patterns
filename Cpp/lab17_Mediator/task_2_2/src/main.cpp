@@ -3,10 +3,10 @@
 
 int main()
 {
-  ConcreteUser user1 = ConcreteUser("User1");
-  ConcreteUser user2 = ConcreteUser("User2");
-  ConcreteUser user3 = ConcreteUser("User3");
-  ConcreteUser user4 = ConcreteUser("User4");
+  ConcreteUser user1{"User1"};
+  ConcreteUser user2{"User2"};
+  ConcreteUser user3{"User3"};
+  ConcreteUser user4{"User4"};
 
   user1.sendMessageAll("Hello, world!");
 
