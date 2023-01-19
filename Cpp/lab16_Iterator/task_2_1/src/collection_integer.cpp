@@ -1,6 +1,6 @@
 #include "collection_integer.hpp"
 
-#include "boost/algorithm/string.hpp"
+#include <boost/algorithm/string.hpp>
 #include <boost/range/adaptor/transformed.hpp>
 
 
@@ -14,14 +14,14 @@ size_t CollectionIntegers::size() const
   return this->array.size();
 }
 
-int CollectionIntegers::get(size_t i) const
+int CollectionIntegers::at(size_t i) const
 {
   return this->array.at(i);
 }
 
-std::vector<int>* CollectionIntegers::getArray()
+std::vector<int> const& CollectionIntegers::getArray() const
 {
-  return &(this->array);
+  return this->array;
 }
 
 std::ostream& operator<<(std::ostream& os, CollectionIntegers const& integers)

@@ -8,8 +8,8 @@ class CollectionIntegers
 public:
   void add(int);
   size_t size() const;
-  int get(size_t) const;
-  std::vector<int>* getArray();
+  int at(size_t) const;
+  std::vector<int> const& getArray() const;
 
   friend std::ostream& operator<<(std::ostream&, CollectionIntegers const&);
 
