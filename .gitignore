@@ -1,10 +1,6 @@
 **/target/**
 .DS_Store
 *.iml
-Java/DecoratorString/.idea/
-Java/DecoratorString/out/
 *.pyc
-
-
-/lectures/lect4/UsbLib/src/META-INF
-/Java/lectures/lect4/UsbLib/src/META-INF
+.idea
+out/
