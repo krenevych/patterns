@@ -5,12 +5,12 @@
 #include "file_reader.hpp"
 
 
-void FileReader::onLineRead(std::string const& line) const
+void FileReader::onLineRead(std::string const& line)
 {
   std::cout << line << std::endl;
 }
 
-void FileReader::read() const
+void FileReader::read()
 {
   std::string line;
 
