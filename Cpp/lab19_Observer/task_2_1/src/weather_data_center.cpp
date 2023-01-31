@@ -25,6 +25,7 @@ bool WeatherDataCenter::update()
 
   if (weatherEvent->getLocation() == "end")
   {
+    delete weatherEvent;
     return true;
   }
 
@@ -34,5 +35,6 @@ bool WeatherDataCenter::update()
             << ", pressure = " << weatherEvent->getPressure()
             << std::endl;
 
+  delete weatherEvent;
   return false;
 }

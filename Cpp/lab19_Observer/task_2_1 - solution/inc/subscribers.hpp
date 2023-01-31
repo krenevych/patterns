@@ -18,8 +18,8 @@ public:
   void update(WeatherDataCenter*, WeatherEvent*);
 
 private:
-  static int const minTemp = -20;
-  static int const maxTemp =  30;
+  inline static int const minTemp = -20;
+  inline static int const maxTemp =  30;
 };
 
 
@@ -29,7 +29,7 @@ public:
   void update(WeatherDataCenter*, WeatherEvent*);
 
 private:
-  static int const minHumidity = 30;
+  inline static int const minHumidity = 30;
 };
 
 
@@ -39,6 +39,6 @@ public:
   void update(WeatherDataCenter*, WeatherEvent*);
 
 private:
-  static int const maxPressure = 780;
-  static int const minPressure = 730;
+  inline static int const maxPressure = 780;
+  inline static int const minPressure = 730;
 };
