@@ -5,7 +5,7 @@ int main()
 {
   using namespace std;
 
-  std::string filePath = "resources/input01.txt";
+  string filePath = "resources/input01.txt";
 
   FileReader fileReader(filePath);
 
