@@ -9,6 +9,6 @@ private:
 
 public:
   FileReader(std::string const&);
-  void read() const;
-  void onLineRead(std::string const&) const;
+  void read();
+  void onLineRead(std::string const&);
 };
