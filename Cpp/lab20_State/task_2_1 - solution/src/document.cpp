@@ -1,8 +1,6 @@
 #include "document.hpp"
 
 
-Document::Document() {}
-
 void Document::publish(std::string const& user)
 {}
 
