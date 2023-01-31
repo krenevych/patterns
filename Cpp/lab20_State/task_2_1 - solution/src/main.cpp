@@ -3,7 +3,7 @@
 
 int main()
 {
-  Document document{};
+  Document document;
 
   document.setText("hello, World!");
 

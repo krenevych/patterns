@@ -8,7 +8,6 @@ private:
   std::string text;
 
 public:
-  Document();
   void publish(std::string const&);
   void abandon(std::string const&);
 
