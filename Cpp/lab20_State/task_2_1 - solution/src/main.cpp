@@ -10,7 +10,7 @@ int main()
   document.publish("user");
   document.publish("user");
   document.abandon("admin");
-  document.setText("Hello, World!");
+  document.setText("Hello, User!");
   document.publish("admin");
 
   return 0;
