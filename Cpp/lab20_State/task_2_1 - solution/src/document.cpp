@@ -4,9 +4,22 @@
 Document::Document()
 : state(new StateDraft()) {}
 
+Document::~Document()
+{
+  if (this->state != nullptr)
+  {
+    delete this->state;
+    this->state = nullptr;
+  }
+}
+
 void Document::setState(State* state)
 {
-  delete this->state;
+  if (this->state != nullptr)
+  {
+    delete this->state;
+  }
+  
   this->state = state;
 }
 
