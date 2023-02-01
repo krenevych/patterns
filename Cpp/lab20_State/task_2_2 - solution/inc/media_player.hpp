@@ -7,6 +7,7 @@
 class MediaPlayer
 {
 public:
+  ~MediaPlayer();
   void setState(State*);
   State* getState() const;
   void setIcon(std::string const&);

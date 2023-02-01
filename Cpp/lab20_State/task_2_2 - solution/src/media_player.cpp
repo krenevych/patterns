@@ -3,8 +3,22 @@
 #include "media_player.hpp"
 
 
+MediaPlayer::~MediaPlayer()
+{
+  if (this->state != nullptr)
+  {
+    delete this->state;
+    this->state = nullptr;
+  }
+}
+
 void MediaPlayer::setState(State* state)
 {
+  if (this->state != nullptr)
+  {
+    delete this->state;
+  }
+
   this->state = state;
 }
 

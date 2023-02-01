@@ -12,6 +12,7 @@ private:
 
 public:
   Document();
+  ~Document();
   void setState(State*);
   void publish(std::string const&);
   void abandon(std::string const&);
