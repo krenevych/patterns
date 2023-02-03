@@ -1,10 +1,10 @@
-#include "vehicles.h"
-
 #include <cassert>
+
+#include "vehicles.hpp"
 
 
 //Vehicle
-Vehicle::Vehicle(int age, std::string model, float damage, int mileage)
+Vehicle::Vehicle(int age, std::string const& model, float damage, int mileage)
 : age(age), model(model), damage(damage), mileage(mileage)
 {
   assert(this->age >= 0);
@@ -34,14 +34,10 @@ int Vehicle::getMileage() const
 
 
 //Car
-Car::Car(int age, std::string model, float damage)
+Car::Car(int age, std::string const& model, float damage)
 : Vehicle(age, model, damage, 0) {}
-
-Car::~Car() {}
 
 
 //Truck
 Truck::Truck(int age, int mileage)
 : Vehicle(age, "truck", 0.0f, mileage) {}
-
-Truck::~Truck() {}

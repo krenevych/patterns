@@ -1,7 +1,5 @@
-#include "auto.h"
+#include "auto.hpp"
 
 
-Auto::Auto(int age, std::string model, bool damaged, int mileage)
+Auto::Auto(int age, std::string const& model, bool damaged, int mileage)
 : age(age), model(model), damaged(damaged), mileage(mileage) {}
-
-Auto::~Auto() {}

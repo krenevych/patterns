@@ -1,31 +1,29 @@
-#include "engine.h"
+#include "engine.hpp"
 
 
 Engine::Engine(int power, int torque, Engine::Fuel fuel, float volume)
 : power(power), torque(torque), fuel(fuel), volume(volume) {}
 
-Engine::~Engine() {}
-
-std::string Engine::toString() const
+std::ostream& operator<<(std::ostream& os, Engine const& engine)
 {
-  std::string result = "Engine{power=" + std::to_string(this->power) +
-  ", torque=" + std::to_string(this->torque) +
-  ", fuel=";
+  os << "Engine{power=" << engine.power
+     << ", torque=" << engine.torque
+     << ", fuel=";
 
-  switch (this->fuel)
+  switch (engine.fuel)
   {
     case Engine::Fuel::Petrol:
-      result += "Petrol";
+      os << "Petrol";
       break;
     case Engine::Fuel::Diesel:
-      result += "Diesel";
+      os << "Diesel";
       break;
     case Engine::Fuel::Electric:
-      result += "Electric";
+      os << "Electric";
       break;
   }
 
-  result += ", volume=" + std::to_string(this->volume) + '}';
+  os << ", volume=" << engine.volume << '}';
 
-  return result;
+  return os;
 }

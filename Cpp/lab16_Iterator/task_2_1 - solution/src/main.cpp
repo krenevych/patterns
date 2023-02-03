@@ -6,6 +6,8 @@
 
 int main()
 {
+  using namespace std;
+
   CollectionIntegers integers;
   integers.add(110);
   integers.add(312);
@@ -16,7 +18,7 @@ int main()
 
   for (auto iter = integers.iterator(); iter.hasNext();)
   {
-    std::cout << iter++ << std::endl;
+    cout << iter++ << endl;
   }
 
   return 0;

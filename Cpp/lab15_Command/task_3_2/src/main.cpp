@@ -4,16 +4,16 @@
 
 int main()
 {
-  Lamp kitchenLamp = Lamp("Kitchen");
-  Lamp hallLamp = Lamp("Hall");
-  Lamp bedroomLamp = Lamp("Bedroom");
-  Lamp bathroomLamp = Lamp("Bathroom");
+  Lamp kitchenLamp{"Kitchen"};
+  Lamp hallLamp{"Hall"};
+  Lamp bedroomLamp{"Bedroom"};
+  Lamp bathroomLamp{"Bathroom"};
 
-  Controller controllerKitchenLamp = Controller();
-  Controller controllerHallLamp = Controller();
-  Controller controllerBedroomLamp = Controller();
-  Controller controllerBathroomLamp = Controller();
-  Controller controllerUniversal = Controller();
+  Controller controllerKitchenLamp;
+  Controller controllerHallLamp;
+  Controller controllerBedroomLamp;
+  Controller controllerBathroomLamp;
+  Controller controllerUniversal;
 
   // Simulation
   controllerKitchenLamp.on();

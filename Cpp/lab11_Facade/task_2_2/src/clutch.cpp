@@ -1,11 +1,9 @@
-#include "clutch.h"
-
 #include <iostream>
+
+#include "clutch.hpp"
 
 
 Clutch::Clutch() {}
-
-Clutch::~Clutch() {}
 
 void Clutch::press()
 {

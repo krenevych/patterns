@@ -1,9 +1,7 @@
-#include "sales_team.h"
+#include "sales_team.hpp"
 
 
 SalesTeam::SalesTeam() {}
-
-SalesTeam::~SalesTeam() {}
 
 void SalesTeam::addManager(Manager* manager)
 {
@@ -17,11 +15,11 @@ void SalesTeam::addSalesperson(Salesperson* salesperson)
 
 void SalesTeam::payExpenses(int amount)
 {
-  for (auto & manager: this->managers)
+  for (auto& manager: this->managers)
   {
     manager->payExpenses(amount);
   }
-  for (auto & salesperson : this->salespeople)
+  for (auto& salesperson : this->salespeople)
   {
     salesperson->payExpenses(amount);
   }

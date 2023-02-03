@@ -9,8 +9,6 @@ Lamp::Lamp(std::string const& name)
 Lamp::Lamp()
 : Lamp("default") {}
 
-Lamp::~Lamp() {}
-
 void Lamp::lightOn()
 {
   if (this->isLightOn)
@@ -24,7 +22,7 @@ void Lamp::lightOn()
 
 void Lamp::lightOff()
 {
-  if (!(this->isLightOn))
+  if (!this->isLightOn)
   {
     return;
   }

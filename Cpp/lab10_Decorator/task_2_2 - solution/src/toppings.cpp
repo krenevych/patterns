@@ -1,18 +1,14 @@
-#include "toppings.h"
+#include "toppings.hpp"
 
 
 //Toppings
 Toppings::Toppings(Pizza const* pizza)
 : pizza(pizza) {}
 
-Toppings::~Toppings() {}
-
 
 //Cheese
 Cheese::Cheese(Pizza const* pizza)
 : Toppings(pizza) {}
-
-Cheese::~Cheese() {}
 
 std::string Cheese::description() const
 {
@@ -29,8 +25,6 @@ float Cheese::cost() const
 Olives::Olives(Pizza const* pizza)
 : Toppings(pizza) {}
 
-Olives::~Olives() {}
-
 std::string Olives::description() const
 {
   return this->pizza->description() + " + Olives";
@@ -44,8 +38,6 @@ float Olives::cost() const
 //Peppers
 Peppers::Peppers(Pizza const* pizza)
 : Toppings(pizza) {}
-
-Peppers::~Peppers() {}
 
 std::string Peppers::description() const
 {

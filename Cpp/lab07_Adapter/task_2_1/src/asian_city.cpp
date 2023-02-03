@@ -1,12 +1,10 @@
-#include "asian_city.h"
+#include "asian_city.hpp"
 
 
-AsianCity::AsianCity(std::string name, double temperature)
+AsianCity::AsianCity(std::string const& name, double temperature)
 : name(name), temperature(temperature), hasWeatherWarning(false) {}
 
-AsianCity::~AsianCity() {}
-
-std::string AsianCity::getName() const
+std::string const& AsianCity::getName() const
 {
   return this->name;
 }

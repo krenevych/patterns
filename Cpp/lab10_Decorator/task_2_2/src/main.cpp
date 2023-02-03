@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "pizzas.h"
+#include "pizzas.hpp"
 
 
 int main()
@@ -8,10 +8,10 @@ int main()
   using namespace std;
 
   Pizza* thick_pizza = new ThickCrustPizza();
-  cout << thick_pizza->toString() << endl;
+  cout << *thick_pizza << endl;
 
   Pizza* thin_pizza = new ThinCrustPizza();
-  cout << thin_pizza->toString() << endl;
+  cout << *thin_pizza << endl;
 
   return 0;
 }

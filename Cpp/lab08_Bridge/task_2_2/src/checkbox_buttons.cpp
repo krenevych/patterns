@@ -1,12 +1,10 @@
-#include "checkbox_buttons.h"
-
 #include <iostream>
+
+#include "checkbox_buttons.hpp"
 
 
 //CheckboxButton
 CheckboxButton::CheckboxButton() {}
-
-CheckboxButton::~CheckboxButton() {}
 
 void CheckboxButton::draw()
 {
@@ -17,8 +15,6 @@ void CheckboxButton::draw()
 //LargeCheckboxButton
 LargeCheckboxButton::LargeCheckboxButton()
 : CheckboxButton() {}
-
-LargeCheckboxButton::~LargeCheckboxButton() {}
 
 void LargeCheckboxButton::draw()
 {
@@ -31,8 +27,6 @@ void LargeCheckboxButton::draw()
 MediumCheckboxButton::MediumCheckboxButton()
 : CheckboxButton() {}
 
-MediumCheckboxButton::~MediumCheckboxButton() {}
-
 void MediumCheckboxButton::draw()
 {
   std::cout << "Setting size to medium..." << std::endl;
@@ -43,8 +37,6 @@ void MediumCheckboxButton::draw()
 //SmallCheckboxButton
 SmallCheckboxButton::SmallCheckboxButton()
 : CheckboxButton() {}
-
-SmallCheckboxButton::~SmallCheckboxButton() {}
 
 void SmallCheckboxButton::draw()
 {

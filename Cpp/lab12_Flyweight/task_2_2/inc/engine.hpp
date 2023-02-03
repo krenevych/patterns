@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 
 
@@ -13,8 +12,7 @@ public:
     Electric
   };
 
-  explicit Engine(int, Fuel const&);
-  ~Engine();
+  Engine(int, Fuel const&);
 
   friend std::ostream& operator<<(std::ostream&, Engine const&);
 

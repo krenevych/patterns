@@ -1,11 +1,9 @@
-#include "flight.h"
-
 #include <iostream>
+
+#include "flight.hpp"
 
 
 Flight::Flight() {}
-
-Flight::~Flight() {}
 
 void Flight::bookOutwardJourney(boost::gregorian::date const& start)
 {

@@ -4,9 +4,7 @@
 //Car
 Car::Car() {}
 
-Car::~Car() {}
-
-std::string Car::getType()
+std::string Car::getType() const
 {
   return "Car";
 }
@@ -20,9 +18,7 @@ std::string Car::runTask(int latitude, int longitude)
 //Truck
 Truck::Truck() {}
 
-Truck::~Truck() {}
-
-std::string Truck::getType()
+std::string Truck::getType() const
 {
   return "Truck";
 }

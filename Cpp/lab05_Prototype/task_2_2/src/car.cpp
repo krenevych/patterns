@@ -1,58 +1,56 @@
-#include "car.h"
+#include "car.hpp"
 
 
 Car::Car(Car::CarType type, Car::CarColor color,
-Engine engine, Wheel wheel)
+Engine& engine, Wheel& wheel)
 : type(type), color(color), engine(engine), wheel(wheel) {}
 
-Car::Car(Car const* other)
-: type(other->type), color(other->color),
-engine(other->engine), wheel(other->wheel) {}
-
-Car::~Car() {}
+Car::Car(Car const& other)
+: type(other.type), color(other.color),
+engine(other.engine), wheel(other.wheel) {}
 
 Car* Car::clone() const
 {
-  return new Car(this);
+  return new Car(*this);
 }
 
-std::string Car::toString() const
+std::ostream& operator<<(std::ostream& os, Car const& car)
 {
-  std::string result = "Car:\ntype=";
+  os << "Car:\ntype=";
 
-  switch (this->type)
+  switch (car.type)
   {
     case Car::CarType::Sedan:
-      result += "Sedan";
+      os << "Sedan";
       break;
     case Car::CarType::Hatchback:
-      result += "Hatchback";
+      os << "Hatchback";
       break;
     case Car::CarType::SUV:
-      result += "SUV";
+      os << "SUV";
       break;
   }
 
-  result += ",\ncarColor=";
+  os << ",\ncarColor=";
 
-  switch (this->color)
+  switch (car.color)
   {
     case Car::CarColor::White:
-      result += "White";
+      os << "White";
       break;
     case Car::CarColor::Black:
-      result += "Black";
+      os << "Black";
       break;
     case Car::CarColor::Red:
-      result += "Red";
+      os << "Red";
       break;
     case Car::CarColor::Grey:
-      result += "Grey";
+      os << "Grey";
       break;
   }
 
-  result += ",\nengine=" + (this->engine.toString()) +
-            ",\nwheel=" + (this->wheel.toString());
+  os << ",\nengine=" << car.engine
+     << ",\nwheel=" << car.wheel;
 
-  return result;
+  return os;
 }

@@ -6,8 +6,7 @@ class Button
 {
 public:
   Button();
-  ~Button();
-  void click() const;
+  void click();
   void setCommand(Command* command);
 
 private:

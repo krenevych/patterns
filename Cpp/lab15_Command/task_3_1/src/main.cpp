@@ -4,9 +4,9 @@
 
 int main()
 {
-  Lamp lamp = Lamp();
+  Lamp lamp{};
 
-  Controller controller = Controller();
+  Controller controller;
 
   // Simulation
   controller.on();

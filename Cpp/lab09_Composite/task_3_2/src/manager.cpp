@@ -1,12 +1,10 @@
-#include "manager.h"
-
 #include <iostream>
+
+#include "manager.hpp"
 
 
 Manager::Manager(std::string const& name)
 : name(name) {}
-
-Manager::~Manager() {}
 
 void Manager::payExpenses(int amount)
 {

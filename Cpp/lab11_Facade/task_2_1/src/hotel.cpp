@@ -1,11 +1,9 @@
-#include "hotel.h"
-
 #include <iostream>
+
+#include "hotel.hpp"
 
 
 Hotel::Hotel() {}
-
-Hotel::~Hotel() {}
 
 void Hotel::book(boost::gregorian::date const& checkinDate, boost::gregorian::date const& checkoutDate)
 {

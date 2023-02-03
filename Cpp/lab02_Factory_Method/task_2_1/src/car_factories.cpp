@@ -1,12 +1,8 @@
-#include "car_factories.h"
-
-
-CarFactory::CarFactory() {}
-CarFactory::~CarFactory() {}
+#include "car_factories.hpp"
 
 
 AudiFactory::AudiFactory() {}
-AudiFactory::~AudiFactory() {}
+
 Audi* AudiFactory::create()
 {
   return new Audi();
@@ -14,7 +10,7 @@ Audi* AudiFactory::create()
 
 
 FordFactory::FordFactory() {}
-FordFactory::~FordFactory() {}
+
 Ford* FordFactory::create()
 {
   return new Ford();
@@ -22,7 +18,7 @@ Ford* FordFactory::create()
 
 
 MazdaFactory::MazdaFactory() {}
-MazdaFactory::~MazdaFactory() {}
+
 Mazda* MazdaFactory::create()
 {
   return new Mazda();
@@ -30,7 +26,7 @@ Mazda* MazdaFactory::create()
 
 
 ToyotaFactory::ToyotaFactory() {}
-ToyotaFactory::~ToyotaFactory() {}
+
 Toyota* ToyotaFactory::create()
 {
   return new Toyota();
@@ -38,7 +34,7 @@ Toyota* ToyotaFactory::create()
 
 
 VWFactory::VWFactory() {}
-VWFactory::~VWFactory() {}
+
 VW* VWFactory::create()
 {
   return new VW();

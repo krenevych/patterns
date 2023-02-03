@@ -13,7 +13,11 @@ TextEditor::TextEditor() :
   printShortcut(Shortcut())
 {}
 
-TextEditor::~TextEditor() {}
+TextEditor::~TextEditor()
+{
+  if (this->document != nullptr)
+    delete this->document;
+}
 
 void TextEditor::newDocument(std::string const& name)
 {

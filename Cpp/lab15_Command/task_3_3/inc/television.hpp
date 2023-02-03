@@ -6,7 +6,6 @@ class Television: public Device
 {
 public:
   Television();
-  ~Television();
   void on();
   void off();
   void volumeUp();

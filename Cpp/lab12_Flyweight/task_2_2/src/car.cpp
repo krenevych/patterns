@@ -5,8 +5,6 @@ Car::Car(Car::CarType const& type, Car::CarColor const& color,
 Engine const& engine, Wheel const& wheel)
 : type(type), color(color), engine(engine), wheel(wheel) {}
 
-Car::~Car() {}
-
 std::ostream& operator<<(std::ostream& os, Car const& car)
 {
   os << "Car:\ntype=";

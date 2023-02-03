@@ -1,12 +1,10 @@
-#include "radio_buttons.h"
-
 #include <iostream>
+
+#include "radio_buttons.hpp"
 
 
 //RadioButton
 RadioButton::RadioButton() {}
-
-RadioButton::~RadioButton() {}
 
 void RadioButton::draw()
 {
@@ -17,8 +15,6 @@ void RadioButton::draw()
 //LargeRadioButton
 LargeRadioButton::LargeRadioButton()
 : RadioButton() {}
-
-LargeRadioButton::~LargeRadioButton() {}
 
 void LargeRadioButton::draw()
 {
@@ -31,8 +27,6 @@ void LargeRadioButton::draw()
 MediumRadioButton::MediumRadioButton()
 : RadioButton() {}
 
-MediumRadioButton::~MediumRadioButton() {}
-
 void MediumRadioButton::draw()
 {
   std::cout << "Setting size to medium..." << std::endl;
@@ -43,8 +37,6 @@ void MediumRadioButton::draw()
 //SmallRadioButton
 SmallRadioButton::SmallRadioButton()
 : RadioButton() {}
-
-SmallRadioButton::~SmallRadioButton() {}
 
 void SmallRadioButton::draw()
 {

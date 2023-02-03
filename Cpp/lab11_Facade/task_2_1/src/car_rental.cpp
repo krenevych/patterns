@@ -1,11 +1,9 @@
-#include "car_rental.h"
-
 #include <iostream>
+
+#include "car_rental.hpp"
 
 
 CarRental::CarRental() {}
-
-CarRental::~CarRental() {}
 
 void CarRental::book(boost::gregorian::date const& start, boost::gregorian::date const& end)
 {

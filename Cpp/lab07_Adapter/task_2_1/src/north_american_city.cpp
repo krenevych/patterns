@@ -1,12 +1,10 @@
-#include "north_american_city.h"
+#include "north_american_city.hpp"
 
 
-NorthAmericanCity::NorthAmericanCity(std::string name, double temperature)
+NorthAmericanCity::NorthAmericanCity(std::string const& name, double temperature)
 : name(name), temperature(temperature), hasWeatherWarning(false) {}
 
-NorthAmericanCity::~NorthAmericanCity() {}
-
-std::string NorthAmericanCity::getName() const
+std::string const& NorthAmericanCity::getName() const
 {
   return this->name;
 }

@@ -1,12 +1,10 @@
-#include "fiction_book.h"
-
 #include <iostream>
+
+#include "fiction_book.hpp"
 
 
 FictionBook::FictionBook(std::string const& name, bool isAPlay)
 : name(name), isAPlay(isAPlay), checkedOut(false) {}
-
-FictionBook::~FictionBook() {}
 
 void FictionBook::checkout()
 {

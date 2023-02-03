@@ -1,20 +1,18 @@
-#include "coffee.h"
-
 #include <iostream>
+
+#include "coffee.hpp"
 
 
 //Coffee
 Coffee::Coffee(int sugar)
 : Beverage(sugar) {}
 
-Coffee::~Coffee() {}
-
 void Coffee::prepare()
 {
   std::cout << "Put some coffee..." << std::endl;
 }
 
-int Coffee::cost()
+int Coffee::cost() const
 {
   return 10;
 }
@@ -23,8 +21,6 @@ int Coffee::cost()
 //BlackCoffee
 BlackCoffee::BlackCoffee(int sugar, int waterVolume, bool extraCoffee)
 : Coffee(sugar), waterVolume(waterVolume), extraCoffee(extraCoffee) {}
-
-BlackCoffee::~BlackCoffee() {}
 
 void BlackCoffee::prepare()
 {
@@ -40,7 +36,7 @@ void BlackCoffee::prepare()
   }
 }
 
-int BlackCoffee::cost()
+int BlackCoffee::cost() const
 {
   return this->Coffee::cost();
 }
@@ -55,8 +51,6 @@ void BlackCoffee::drink()
 CoffeeWithMilk::CoffeeWithMilk(int sugar, int milkVolume)
 : Coffee(sugar), milkVolume(milkVolume) {}
 
-CoffeeWithMilk::~CoffeeWithMilk() {}
-
 void CoffeeWithMilk::prepare()
 {
   this->Coffee::prepare();
@@ -67,7 +61,7 @@ void CoffeeWithMilk::prepare()
   }
 }
 
-int CoffeeWithMilk::cost()
+int CoffeeWithMilk::cost() const
 {
   return this->Coffee::cost() + static_cast<int>(milkVolume / 20.0);
 }

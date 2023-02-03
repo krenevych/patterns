@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 
 #include "engine.hpp"
@@ -24,8 +23,8 @@ public:
     SUV
   };
 
-  explicit Car(CarType const&, CarColor const&, Engine const&, Wheel const&);
-  ~Car();
+  Car(CarType const&, CarColor const&, Engine const&, Wheel const&);
+
   friend std::ostream& operator<<(std::ostream&, Car const&);
 
 private:

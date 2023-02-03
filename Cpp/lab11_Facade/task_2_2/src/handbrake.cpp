@@ -1,11 +1,9 @@
-#include "handbrake.h"
-
 #include <iostream>
+
+#include "handbrake.hpp"
 
 
 Handbrake::Handbrake() {}
-
-Handbrake::~Handbrake() {}
 
 void Handbrake::pushDown()
 {

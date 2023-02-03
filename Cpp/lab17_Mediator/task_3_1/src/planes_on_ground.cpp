@@ -1,6 +1,6 @@
-#include "planes_on_ground.hpp"
-
 #include <algorithm>
+
+#include "planes_on_ground.hpp"
 
 
 PlanesOnGround::PlanesOnGround() {}

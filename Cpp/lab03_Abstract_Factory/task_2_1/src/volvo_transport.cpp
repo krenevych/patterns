@@ -1,12 +1,10 @@
-#include "volvo_transport.h"
-
 #include <iostream>
+
+#include "volvo_transport.hpp"
 
 
 VolvoBus::VolvoBus()
-: Bus(6000000, 20) {}
-
-VolvoBus::~VolvoBus() {}
+: Bus(6'000'000, 20) {}
 
 void VolvoBus::goByWay()
 {
@@ -15,9 +13,7 @@ void VolvoBus::goByWay()
 
 
 VolvoTram::VolvoTram()
-: Tram(10000000, 7) {}
-
-VolvoTram::~VolvoTram() {}
+: Tram(10'000'000, 7) {}
 
 void VolvoTram::goByRails()
 {
@@ -26,9 +22,7 @@ void VolvoTram::goByRails()
 
 
 VolvoTrolleybus::VolvoTrolleybus()
-: Trolleybus(7000000, 13) {}
-
-VolvoTrolleybus::~VolvoTrolleybus() {}
+: Trolleybus(7'000'000, 13) {}
 
 void VolvoTrolleybus::goByContactNetwork()
 {

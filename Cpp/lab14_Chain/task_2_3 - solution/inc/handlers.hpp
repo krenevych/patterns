@@ -14,7 +14,6 @@ class PropertyHandler: public Handler
 {
 public:
   PropertyHandler();
-  ~PropertyHandler();
   virtual void setProperty(Image&);
   void setNext(Handler*);
 
@@ -27,7 +26,6 @@ class PropertyHandlerCamera: public PropertyHandler
 {
 public:
   PropertyHandlerCamera(std::string const&);
-  ~PropertyHandlerCamera();
   void setProperty(Image&) override;
 
 private:
@@ -39,7 +37,6 @@ class PropertyHandlerDateTime: public PropertyHandler
 {
 public:
   PropertyHandlerDateTime();
-  ~PropertyHandlerDateTime();
   void setProperty(Image&) override;
 };
 
@@ -48,7 +45,6 @@ class PropertyHandlerName: public PropertyHandler
 {
 public:
   PropertyHandlerName();
-  ~PropertyHandlerName();
   void setProperty(Image&) override;
 };
 
@@ -57,7 +53,6 @@ class PropertyHandlerType: public PropertyHandler
 {
 public:
   PropertyHandlerType(Image::Type const);
-  ~PropertyHandlerType();
   void setProperty(Image&) override;
 
 private:

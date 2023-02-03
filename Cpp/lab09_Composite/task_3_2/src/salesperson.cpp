@@ -1,12 +1,10 @@
-#include "salesperson.h"
-
 #include <iostream>
+
+#include "salesperson.hpp"
 
 
 Salesperson::Salesperson(std::string const& name, Manager* manager)
 : name(name), manager(manager) {}
-
-Salesperson::~Salesperson() {}
 
 void Salesperson::payExpenses(int amount)
 {

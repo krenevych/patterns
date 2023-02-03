@@ -1,6 +1,6 @@
-#include "north_american_city.h"
-#include "asian_city.h"
-#include "weather_warnings.h"
+#include "north_american_city.hpp"
+#include "asian_city.hpp"
+#include "weather_warnings.hpp"
 
 
 int main()

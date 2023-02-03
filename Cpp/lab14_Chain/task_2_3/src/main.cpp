@@ -7,7 +7,7 @@ int main()
 {
   using namespace std;
 
-  Image image = Image();
+  Image image;
   cout << image << endl;
 
   return 0;

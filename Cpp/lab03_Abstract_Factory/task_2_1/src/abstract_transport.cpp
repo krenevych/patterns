@@ -1,17 +1,15 @@
-#include "abstract_transport.h"
+#include "abstract_transport.hpp"
 
 
 Bus::Bus(int cost, int usagecost)
 : cost(cost), usagecost(usagecost) {}
 
-Bus::~Bus() {}
-
-int Bus::getCost()
+int Bus::getCost() const
 {
   return this->cost;
 }
 
-int Bus::getUsageCost()
+int Bus::getUsageCost() const
 {
   return this->usagecost;
 }
@@ -20,14 +18,12 @@ int Bus::getUsageCost()
 Tram::Tram(int cost, int usagecost)
 : cost(cost), usagecost(usagecost) {}
 
-Tram::~Tram() {}
-
-int Tram::getCost()
+int Tram::getCost() const
 {
   return this->cost;
 }
 
-int Tram::getUsageCost()
+int Tram::getUsageCost() const
 {
   return this->usagecost;
 }
@@ -36,14 +32,12 @@ int Tram::getUsageCost()
 Trolleybus::Trolleybus(int cost, int usagecost)
 : cost(cost), usagecost(usagecost) {}
 
-Trolleybus::~Trolleybus() {}
-
-int Trolleybus::getCost()
+int Trolleybus::getCost() const
 {
   return this->cost;
 }
 
-int Trolleybus::getUsageCost()
+int Trolleybus::getUsageCost() const
 {
   return this->usagecost;
 }

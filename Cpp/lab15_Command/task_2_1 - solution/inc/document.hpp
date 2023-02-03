@@ -6,7 +6,6 @@ class Document
 {
 public:
   Document(std::string const&);
-  ~Document();
   void save();
   void showInfo() const;
   void print() const;

@@ -4,8 +4,6 @@
 Engine::Engine(int power, Engine::Fuel const& fuel)
 : power(power), fuel(fuel) {}
 
-Engine::~Engine() {}
-
 std::ostream& operator<<(std::ostream& os, Engine const& engine)
 {
   os << "Engine{power=" << engine.power << ", fuel=";

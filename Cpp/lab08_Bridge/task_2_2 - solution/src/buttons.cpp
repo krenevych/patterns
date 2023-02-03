@@ -1,13 +1,11 @@
-#include "buttons.h"
-
 #include <iostream>
+
+#include "buttons.hpp"
 
 
 //Button
 Button::Button(ControlSize* controlSize)
 : controlSize(controlSize) {}
-
-Button::~Button() {}
 
 void Button::draw()
 {
@@ -18,8 +16,6 @@ void Button::draw()
 //CheckboxButton
 CheckboxButton::CheckboxButton(ControlSize* controlSize)
 : Button(controlSize) {}
-
-CheckboxButton::~CheckboxButton() {}
 
 void CheckboxButton::draw()
 {
@@ -32,8 +28,6 @@ void CheckboxButton::draw()
 DropdownButton::DropdownButton(ControlSize* controlSize)
 : Button(controlSize) {}
 
-DropdownButton::~DropdownButton() {}
-
 void DropdownButton::draw()
 {
   this->Button::draw();
@@ -44,8 +38,6 @@ void DropdownButton::draw()
 //RadioButton
 RadioButton::RadioButton(ControlSize* controlSize)
 : Button(controlSize) {}
-
-RadioButton::~RadioButton() {}
 
 void RadioButton::draw()
 {

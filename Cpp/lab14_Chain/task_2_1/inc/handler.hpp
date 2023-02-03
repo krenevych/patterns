@@ -5,6 +5,6 @@
 class Handler
 {
 public:
-  virtual void open(std::string) = 0;
+  virtual void open(std::string const&) = 0;
   virtual void setNext(Handler*) = 0;
 };

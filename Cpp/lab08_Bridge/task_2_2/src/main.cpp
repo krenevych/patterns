@@ -1,17 +1,17 @@
-#include "checkbox_buttons.h"
-#include "dropdown_buttons.h"
-#include "radio_buttons.h"
+#include "checkbox_buttons.hpp"
+#include "dropdown_buttons.hpp"
+#include "radio_buttons.hpp"
 
 
 int main()
 {
-  SmallCheckboxButton checkboxButton = SmallCheckboxButton();
+  SmallCheckboxButton checkboxButton{};
   checkboxButton.draw();
 
-  MediumRadioButton radioButton = MediumRadioButton();
+  MediumRadioButton radioButton{};
   radioButton.draw();
 
-  LargeDropdownButton dropdownButton = LargeDropdownButton();
+  LargeDropdownButton dropdownButton{};
   dropdownButton.draw();
 
   return 0;

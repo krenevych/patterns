@@ -3,6 +3,4 @@
 
 Shortcut::Shortcut() {}
 
-Shortcut::~Shortcut() {}
-
-void Shortcut::press() const {}
+void Shortcut::press() {}

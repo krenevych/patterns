@@ -1,14 +1,13 @@
 #pragma once
-#include "project.hpp"
-
 #include <string>
+
+#include "project.hpp"
 
 
 class RealProject: public Project
 {
 public:
-  RealProject(std::string);
-  ~RealProject();
+  RealProject(std::string const&);
   void run();
 
 private:

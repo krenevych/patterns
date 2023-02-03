@@ -9,8 +9,6 @@ Lamp::Lamp(std::string const& name)
 Lamp::Lamp()
 : Lamp("default") {}
 
-Lamp::~Lamp() {}
-
 void Lamp::lightOn()
 {
   if (this->isLightOn)
