@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "sales_team.h"
+#include "sales_team.hpp"
 
 
 void payManager(Manager& manager, int amount)
@@ -27,11 +27,11 @@ void payTeam(SalesTeam& team, int amount)
 
 int main()
 {
-  Manager jane = Manager("Jane");
-  Salesperson bob = Salesperson("Bob", &jane);
-  Salesperson sue = Salesperson("Sue", &jane);
+  Manager jane{"Jane"};
+  Salesperson bob{"Bob", &jane};
+  Salesperson sue{"Sue", &jane};
 
-  SalesTeam team = SalesTeam();
+  SalesTeam team;
   team.addManager(&jane);
   team.addSalesperson(&bob);
   team.addSalesperson(&sue);

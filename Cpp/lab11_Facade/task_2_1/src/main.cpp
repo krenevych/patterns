@@ -1,8 +1,8 @@
-#include "boost/date_time/gregorian/gregorian_types.hpp"
+#include <boost/date_time/gregorian/gregorian_types.hpp>
 
-#include "car_rental.h"
-#include "flight.h"
-#include "hotel.h"
+#include "car_rental.hpp"
+#include "flight.hpp"
+#include "hotel.hpp"
 
 
 int main ()
@@ -13,14 +13,14 @@ int main ()
   date startDate(2021, 8, 1);
   date endDate(2021, 8, 15);
 
-  CarRental carRental = CarRental();
+  CarRental carRental;
   carRental.book(startDate, endDate);
 
-  Flight flight = Flight();
+  Flight flight;
   flight.bookOutwardJourney(startDate);
   flight.bookReturnJourney(endDate);
 
-  Hotel hotel = Hotel();
+  Hotel hotel;
   hotel.book(startDate, endDate);
 
   return 0;

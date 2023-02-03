@@ -1,12 +1,10 @@
-#include "scoda_transport.h"
-
 #include <iostream>
+
+#include "scoda_transport.hpp"
 
 
 ScodaBus::ScodaBus()
-: Bus(4500000, 25) {}
-
-ScodaBus::~ScodaBus() {}
+: Bus(4'500'000, 25) {}
 
 void ScodaBus::goByWay()
 {
@@ -15,9 +13,7 @@ void ScodaBus::goByWay()
 
 
 ScodaTram::ScodaTram()
-: Tram(9000000, 8) {}
-
-ScodaTram::~ScodaTram() {}
+: Tram(9'000'000, 8) {}
 
 void ScodaTram::goByRails()
 {
@@ -26,9 +22,7 @@ void ScodaTram::goByRails()
 
 
 ScodaTrolleybus::ScodaTrolleybus()
-: Trolleybus(6800000, 13) {}
-
-ScodaTrolleybus::~ScodaTrolleybus() {}
+: Trolleybus(6'800'000, 13) {}
 
 void ScodaTrolleybus::goByContactNetwork()
 {

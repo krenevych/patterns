@@ -3,7 +3,7 @@
 
 int main()
 {
-  TextEditor textEditor = TextEditor();
+  TextEditor textEditor{};
   textEditor.newDocument("blank.txt");
 
   /////////////////////////////////////////////

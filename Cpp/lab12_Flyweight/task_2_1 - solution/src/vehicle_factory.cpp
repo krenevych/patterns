@@ -1,14 +1,6 @@
 #include "vehicle_factory.hpp"
 
 
-VehicleFactory::~VehicleFactory()
-{
-  for (auto vehicle_pair: this->vehicles)
-  {
-    delete std::get<1>(vehicle_pair);
-  }
-}
-
 Vehicle* VehicleFactory::getVehicle(int type)
 {
   auto iter = this->vehicles.find(type);

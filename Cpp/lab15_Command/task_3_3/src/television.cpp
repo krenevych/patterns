@@ -1,12 +1,10 @@
-#include "television.hpp"
-
 #include <iostream>
+
+#include "television.hpp"
 
 
 Television::Television()
 : volume(50), chanel(1), isOn(false) {}
-
-Television::~Television() {}
 
 void Television::on()
 {
@@ -21,7 +19,7 @@ void Television::on()
 
 void Television::off()
 {
-  if (!(this->isOn))
+  if (!this->isOn)
   {
     return;
   }

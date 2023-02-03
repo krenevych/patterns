@@ -2,10 +2,8 @@
 #include "real_project.hpp"
 
 
-ProjectProxy::ProjectProxy(std::string url)
+ProjectProxy::ProjectProxy(std::string const& url)
 : url(url) {}
-
-ProjectProxy::~ProjectProxy() {}
 
 void ProjectProxy::run()
 {

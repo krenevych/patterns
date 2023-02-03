@@ -1,32 +1,16 @@
 #pragma once
 #include <vector>
-#include <algorithm>
 
 
-template<class Collection>
+class CollectionIntegers;
+
 class IntegerIterator
 {
 public:
-  IntegerIterator(Collection const& collection)
-  : collectionIntegers(collection.getArray()), index(0)
-  {
-    std::sort(this->collectionIntegers.begin(), this->collectionIntegers.end());
-  }
-
-  bool hasNext() const
-  {
-    return this->index < this->collectionIntegers.size();
-  }
-
-  int next()
-  {
-    return this->collectionIntegers.at((this->index)++);
-  }
-
-  int operator++(int)
-  {
-    return this->next();
-  }
+  IntegerIterator(CollectionIntegers const*);
+  bool hasNext() const;
+  int next();
+  int operator++(int);
 
 private:
   std::vector<int> collectionIntegers;

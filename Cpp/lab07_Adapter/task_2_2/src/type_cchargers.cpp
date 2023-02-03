@@ -1,10 +1,8 @@
-#include "type_cchargers.h"
+#include "type_cchargers.hpp"
 
 
 FastCharge::FastCharge(float power)
 : power(power) {}
-
-FastCharge::~FastCharge() {}
 
 float FastCharge::getOutputPower() const
 {

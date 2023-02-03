@@ -1,13 +1,11 @@
-#include "book_collection.h"
-
 #include <algorithm>
+
+#include "book_collection.hpp"
 
 
 BookCollection::BookCollection() {}
 
-BookCollection::~BookCollection() {}
-
-std::vector<Readable*>& BookCollection::getChildren()
+std::vector<Readable*> const& BookCollection::getChildren() const
 {
   return this->children;
 }

@@ -1,23 +1,25 @@
 #include <iostream>
 
-#include "car_builder.h"
-#include "car_director.h"
+#include "car_builder.hpp"
+#include "car_director.hpp"
 
 
 int main()
 {
-  CarBuilder* carBuilder = new CarBuilder();
+  using namespace std;
 
-  CarDirector* director = new CarDirector();
-  director->setCarBuilder(carBuilder);
+  CarBuilder carBuilder{};
 
-  Car* car = director->makeDefaultCar();
-  Car* sportCar = director->makeSportCar();
-  Car* suv = director->makeSUV();
+  CarDirector director;
+  director.setCarBuilder(&carBuilder);
 
-  std::cout << car->toString() << std::endl;
-  std::cout << sportCar->toString() << std::endl;
-  std::cout << suv->toString() << std::endl;
+  Car* car = director.makeDefaultCar();
+  Car* sportCar = director.makeSportCar();
+  Car* suv = director.makeSUV();
+
+  cout << *car << endl;
+  cout << *sportCar << endl;
+  cout << *suv << endl;
 
   return 0;
 }

@@ -1,15 +1,13 @@
-#include "weather_warnings.h"
-
 #include <iostream>
+
+#include "weather_warnings.hpp"
 
 
 WeatherWarnings::WeatherWarnings() {}
 
-WeatherWarnings::~WeatherWarnings() {}
-
 void WeatherWarnings::postWarning(City& city) const
 {
-  if (city.getTemperature() >= this->MAX_TEMPERATURE || city.getTemperature() <= this->MIN_TEMPERATURE)
+  if (city.getTemperature() >= WeatherWarnings::MAX_TEMPERATURE || city.getTemperature() <= WeatherWarnings::MIN_TEMPERATURE)
   {
     std::cout << "Warning! Current temperature in " << city.getName() << " is " << city.getTemperature()
     << " " << city.getTemperatureScale() << std::endl;

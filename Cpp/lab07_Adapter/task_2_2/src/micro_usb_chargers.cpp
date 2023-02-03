@@ -1,10 +1,8 @@
-#include "micro_usb_chargers.h"
+#include "micro_usb_chargers.hpp"
 
 
 Charger::Charger(float voltage, float amperage)
 : voltage(voltage), amperage(amperage) {}
-
-Charger::~Charger() {}
 
 float Charger::getOutputVoltage() const
 {

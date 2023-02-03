@@ -1,11 +1,9 @@
-#include "accelerator.h"
-
 #include <iostream>
+
+#include "accelerator.hpp"
 
 
 Accelerator::Accelerator() {}
-
-Accelerator::~Accelerator() {}
 
 void Accelerator::press()
 {

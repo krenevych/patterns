@@ -1,14 +1,14 @@
-#include "books.h"
-#include "book_collection.h"
+#include "books.hpp"
+#include "book_collection.hpp"
 
 
 int main()
 {
-  NonfictionBook nonfictionBook = NonfictionBook("A Brief History of Time");
-  FictionBook fictionBookOne = FictionBook("Hamlet", true);
-  FictionBook fictionBookTwo = FictionBook("The Great Gatsby", false);
+  NonfictionBook nonfictionBook{"A Brief History of Time"};
+  FictionBook fictionBookOne{"Hamlet", true};
+  FictionBook fictionBookTwo{"The Great Gatsby", false};
 
-  BookCollection bookCollection = BookCollection();
+  BookCollection bookCollection;
   bookCollection.add(&nonfictionBook);
   bookCollection.add(&fictionBookOne);
   bookCollection.add(&fictionBookTwo);

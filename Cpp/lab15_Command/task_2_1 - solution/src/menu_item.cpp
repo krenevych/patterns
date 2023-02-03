@@ -3,9 +3,7 @@
 
 MenuItem::MenuItem() {}
 
-MenuItem::~MenuItem() {}
-
-void MenuItem::select() const
+void MenuItem::select()
 {
   if (this->command != nullptr)
   {

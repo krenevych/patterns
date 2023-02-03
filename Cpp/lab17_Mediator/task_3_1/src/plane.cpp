@@ -1,9 +1,9 @@
+#include <iostream>
+
 #include "plane.hpp"
 #include "runway.hpp"
 #include "planes_in_flight.hpp"
 #include "planes_on_ground.hpp"
-
-#include <iostream>
 
 
 Plane::Plane(int id)

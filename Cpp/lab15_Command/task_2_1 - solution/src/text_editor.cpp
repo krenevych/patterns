@@ -1,12 +1,10 @@
-#include "text_editor.hpp"
-
 #include <iostream>
+
+#include "text_editor.hpp"
 
 
 TextEditor::SaveDocument::SaveDocument(Document*& document)
 : document(document) {}
-
-TextEditor::SaveDocument::~SaveDocument() {}
 
 void TextEditor::SaveDocument::execute()
 {
@@ -19,8 +17,6 @@ void TextEditor::SaveDocument::execute()
 TextEditor::PrintDocument::PrintDocument(Document*& document)
 : document(document) {}
 
-TextEditor::PrintDocument::~PrintDocument() {}
-
 void TextEditor::PrintDocument::execute()
 {
   if (this->document != nullptr)
@@ -31,8 +27,6 @@ void TextEditor::PrintDocument::execute()
 
 TextEditor::ShowInfo::ShowInfo(Document*& document)
 : document(document) {}
-
-TextEditor::ShowInfo::~ShowInfo() {}
 
 void TextEditor::ShowInfo::execute()
 {
@@ -79,7 +73,11 @@ TextEditor::TextEditor() :
   );
 }
 
-TextEditor::~TextEditor() {}
+TextEditor::~TextEditor()
+{
+  if (this->document != nullptr)
+    delete this->document;
+}
 
 void TextEditor::newDocument(std::string const& name)
 {

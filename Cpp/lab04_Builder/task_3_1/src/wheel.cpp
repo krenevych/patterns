@@ -1,29 +1,27 @@
-#include "wheel.h"
+#include "wheel.hpp"
 
 
 Wheel::Wheel(Wheel::Material material, int diameter)
 : material(material), diameter(diameter) {}
 
-Wheel::~Wheel() {}
-
-std::string Wheel::toString() const
+std::ostream& operator<<(std::ostream& os, Wheel const& wheel)
 {
-  std::string result = "Wheel{material=";
+  os << "Wheel{material=";
 
-  switch (this->material)
+  switch (wheel.material)
   {
     case Wheel::Material::Steel:
-      result += "Steel";
+      os << "Steel";
       break;
     case Wheel::Material::Alloy:
-      result += "Alloy";
+      os << "Alloy";
       break;
     case Wheel::Material::Forged:
-      result += "Forged";
+      os << "Forged";
       break;
   }
 
-  result += ", diameter=" + std::to_string(diameter) + "}";
+  os << ", diameter=" << wheel.diameter << "}";
 
-  return  result;
+  return os;
 }

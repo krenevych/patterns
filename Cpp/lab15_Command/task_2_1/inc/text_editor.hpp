@@ -22,7 +22,7 @@ public:
   void pressPrintShortcut();
 
 private:
-  Document* document;
+  Document* document = nullptr;
 
   Button saveButton;
   Button printButton;

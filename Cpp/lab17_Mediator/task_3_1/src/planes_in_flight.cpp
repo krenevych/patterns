@@ -1,6 +1,6 @@
-#include "planes_in_flight.hpp"
-
 #include <algorithm>
+
+#include "planes_in_flight.hpp"
 
 
 PlanesInFlight::PlanesInFlight() {}

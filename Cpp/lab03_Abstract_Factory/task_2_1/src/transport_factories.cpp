@@ -1,14 +1,7 @@
-#include "transport_factories.h"
+#include "transport_factories.hpp"
 
 
-TransportFactory::TransportFactory() {}
-TransportFactory::~TransportFactory() {}
-
-
-ScodaFactory::ScodaFactory()
-: TransportFactory() {}
-
-ScodaFactory::~ScodaFactory() {}
+ScodaFactory::ScodaFactory() {}
 
 ScodaBus* ScodaFactory::createBus()
 {
@@ -26,10 +19,7 @@ ScodaTrolleybus* ScodaFactory::createTrolley()
 }
 
 
-VolvoFactory::VolvoFactory()
-: TransportFactory() {}
-
-VolvoFactory::~VolvoFactory() {}
+VolvoFactory::VolvoFactory() {}
 
 VolvoBus* VolvoFactory::createBus()
 {

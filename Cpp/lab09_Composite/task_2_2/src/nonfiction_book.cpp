@@ -1,12 +1,10 @@
-#include "nonfiction_book.h"
-
 #include <iostream>
+
+#include "nonfiction_book.hpp"
 
 
 NonfictionBook::NonfictionBook(std::string const& name)
 : name(name), checkedOut(false) {}
-
-NonfictionBook::~NonfictionBook() {}
 
 void NonfictionBook::checkout()
 {

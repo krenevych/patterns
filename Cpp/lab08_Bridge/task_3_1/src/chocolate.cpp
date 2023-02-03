@@ -1,20 +1,18 @@
-#include "chocolate.h"
-
 #include <iostream>
+
+#include "chocolate.hpp"
 
 
 //Chocolate
 Chocolate::Chocolate(int sugar)
 : Beverage(sugar) {}
 
-Chocolate::~Chocolate() {}
-
 void Chocolate::prepare()
 {
   std::cout << "Put some cacao..." << std::endl;
 }
 
-int Chocolate::cost()
+int Chocolate::cost() const
 {
   return 15;
 }
@@ -23,8 +21,6 @@ int Chocolate::cost()
 //BlackChocolate
 BlackChocolate::BlackChocolate(int sugar, int waterVolume)
 : Chocolate(sugar), waterVolume(waterVolume) {}
-
-BlackChocolate::~BlackChocolate() {}
 
 void BlackChocolate::prepare()
 {
@@ -36,7 +32,7 @@ void BlackChocolate::prepare()
   }
 }
 
-int BlackChocolate::cost()
+int BlackChocolate::cost() const
 {
   return this->Chocolate::cost();
 }
@@ -51,8 +47,6 @@ void BlackChocolate::drink()
 MilkChocolate::MilkChocolate(int sugar, int milkVolume)
 : Chocolate(sugar), milkVolume(milkVolume) {}
 
-MilkChocolate::~MilkChocolate() {}
-
 void MilkChocolate::prepare()
 {
   this->Chocolate::prepare();
@@ -63,7 +57,7 @@ void MilkChocolate::prepare()
   }
 }
 
-int MilkChocolate::cost()
+int MilkChocolate::cost() const
 {
   return this->Chocolate::cost() + static_cast<int>(milkVolume / 20.0);
 }

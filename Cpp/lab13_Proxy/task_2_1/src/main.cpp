@@ -17,8 +17,8 @@ int main()
     new RealProject("github.com/krenevych/project6"),
   };
 
-  std::random_device dev;
-  std::mt19937 generator(dev());
+  random_device dev;
+  mt19937 generator(dev());
   uniform_int_distribution<int> uniform_int_distr(0, projects.size()-1);
 
   int projectNum = uniform_int_distr(generator);

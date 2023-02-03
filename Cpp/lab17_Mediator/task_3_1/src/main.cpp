@@ -6,7 +6,7 @@
 
 int main()
 {
-  Plane plane = Plane(123);
+  Plane plane{123};
   plane.takeOff();
   plane.takeOn();
 

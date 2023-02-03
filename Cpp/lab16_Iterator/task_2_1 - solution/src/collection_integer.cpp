@@ -1,7 +1,7 @@
-#include "collection_integer.hpp"
-
 #include <boost/algorithm/string.hpp>
 #include <boost/range/adaptor/transformed.hpp>
+
+#include "collection_integer.hpp"
 
 
 void CollectionIntegers::add(int i)
@@ -29,13 +29,13 @@ std::ostream& operator<<(std::ostream& os, CollectionIntegers const& integers)
   os << "Iterable{array={" <<
      boost::algorithm::join(integers.array |
        boost::adaptors::transformed(static_cast<std::string(*)(int)>(std::to_string)),
-       ", ") <<
-     "}}";
+       ", ")
+     << "}}";
 
   return os;
 }
 
-IntegerIterator<CollectionIntegers> CollectionIntegers::iterator() const
+IntegerIterator CollectionIntegers::iterator() const
 {
-  return IntegerIterator(*this);
+  return IntegerIterator(this);
 }

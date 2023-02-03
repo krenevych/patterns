@@ -1,5 +1,4 @@
 #pragma once
-
 #include <map>
 #include <string>
 
@@ -10,6 +9,5 @@ class VehicleFactory
 {
 public:
   std::map<int, Vehicle*> vehicles;
-  ~VehicleFactory();
   Vehicle* getVehicle(int);
 };

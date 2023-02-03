@@ -1,5 +1,4 @@
 #pragma once
-
 #include <iostream>
 
 
@@ -12,8 +11,7 @@ public:
     Alloy,  //  легкосплавний
   };
 
-  explicit Wheel(int);
-  ~Wheel();
+  Wheel(int);
 
   friend std::ostream& operator<<(std::ostream&, Wheel const&);
 

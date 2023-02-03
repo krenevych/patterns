@@ -1,13 +1,11 @@
-#include "mobile_phones.h"
-
 #include <iostream>
 #include <cmath>
+
+#include "mobile_phones.hpp"
 
 
 //SamsungS7
 SamsungS7::SamsungS7() {}
-
-SamsungS7::~SamsungS7() {}
 
 int SamsungS7::getChargingPercent() const
 {
@@ -55,8 +53,6 @@ void SamsungS7::charge(int time)
 
 //SamsungS22
 SamsungS22::SamsungS22() {}
-
-SamsungS22::~SamsungS22() {}
 
 int SamsungS22::getChargingPercent() const
 {

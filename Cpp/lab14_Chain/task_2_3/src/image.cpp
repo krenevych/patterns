@@ -3,8 +3,6 @@
 
 Image::Image() {}
 
-Image::~Image() {}
-
 Image::Type Image::getType() const
 {
   return this->type;
@@ -41,42 +39,42 @@ void Image::setType(Image::Type type)
   this->type = type;
 }
 
-std::string Image::getCamera() const
+std::string const& Image::getCamera() const
 {
   return this->camera;
 }
 
-void Image::setCamera(std::string camera)
+void Image::setCamera(std::string const& camera)
 {
   this->camera = camera;
 }
 
-std::string Image::getName() const
+std::string const& Image::getName() const
 {
   return this->name;
 }
 
-void Image::setName(std::string name)
+void Image::setName(std::string const& name)
 {
   this->name = name;
 }
 
-std::string Image::getCreationDate() const
+std::string const& Image::getCreationDate() const
 {
   return this->creationDate;
 }
 
-void Image::setCreationDate(std::string creationDate)
+void Image::setCreationDate(std::string const& creationDate)
 {
   this->creationDate = creationDate;
 }
 
-std::string Image::getCreationTime() const
+std::string const& Image::getCreationTime() const
 {
   return this->creationTime;
 }
 
-void Image::setCreationTime(std::string creationTime)
+void Image::setCreationTime(std::string const& creationTime)
 {
   this->creationTime = creationTime;
 }

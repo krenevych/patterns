@@ -4,7 +4,7 @@
 Employee::Employee(std::string const& name)
 : name(name) {}
 
-std::string Employee::getName() const
+std::string const& Employee::getName() const
 {
   return this->name;
 }

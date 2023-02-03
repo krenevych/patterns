@@ -1,7 +1,7 @@
+#include <iostream>
+
 #include "driver.hpp"
 #include "customer.hpp"
-
-#include <iostream>
 
 
 Driver::Driver() {}

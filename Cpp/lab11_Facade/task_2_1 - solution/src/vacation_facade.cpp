@@ -1,19 +1,17 @@
-#include "vacation_facade.h"
+#include "vacation_facade.hpp"
 
 
 VacationFacade::VacationFacade() {}
 
-VacationFacade::~VacationFacade() {}
-
 void VacationFacade::book(boost::gregorian::date const& startDate, boost::gregorian::date const& endDate)
 {
-  Flight flight = Flight();
+  Flight flight;
   flight.bookOutwardJourney(startDate);
   flight.bookReturnJourney(endDate);
 
-  Hotel hotel = Hotel();
+  Hotel hotel;
   hotel.book(startDate, endDate);
 
-  CarRental carRental = CarRental();
+  CarRental carRental;
   carRental.book(startDate, endDate);
 }

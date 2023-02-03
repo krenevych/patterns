@@ -5,9 +5,9 @@
 
 int main()
 {
-  Employee zak = Employee("Zak");
-  Employee sarah = Employee("Sarah");
-  Employee anna = Employee("Anna");
+  Employee zak{"Zak"};
+  Employee sarah{"Sarah"};
+  Employee anna{"Anna"};
 
   return 0;
 }

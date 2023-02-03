@@ -1,14 +1,12 @@
-#include "adapters.h"
-
 #include <cassert>
 #include <cmath>
+
+#include "adapters.hpp"
 
 
 //AdapterMicroUsbToTypeC_Inheritance
 AdapterMicroUsbToTypeC_Inheritance::AdapterMicroUsbToTypeC_Inheritance(float voltage, float amperage)
 : Charger(voltage, amperage) {}
-
-AdapterMicroUsbToTypeC_Inheritance::~AdapterMicroUsbToTypeC_Inheritance() {}
 
 float AdapterMicroUsbToTypeC_Inheritance::getOutputPower() const
 {
@@ -23,8 +21,6 @@ AdapterMicroUsbToTypeC::AdapterMicroUsbToTypeC(Charger const* charger)
   assert(charger != nullptr);
 }
 
-AdapterMicroUsbToTypeC::~AdapterMicroUsbToTypeC() {}
-
 float AdapterMicroUsbToTypeC::getOutputPower() const
 {
   return charger->getOutputAmperage() * charger->getOutputVoltage();
@@ -34,8 +30,6 @@ float AdapterMicroUsbToTypeC::getOutputPower() const
 //AdapterTypeCToMicroUsb
 AdapterTypeCToMicroUsb::AdapterTypeCToMicroUsb(TypeCCharger const* typeCCharger)
 : typeCCharger(typeCCharger) {}
-
-AdapterTypeCToMicroUsb::~AdapterTypeCToMicroUsb() {}
 
 float AdapterTypeCToMicroUsb::getOutputVoltage() const
 {

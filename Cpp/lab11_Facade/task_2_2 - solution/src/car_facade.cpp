@@ -1,23 +1,21 @@
-#include "car_facade.h"
+#include "car_facade.hpp"
 
-#include "accelerator.h"
-#include "clutch.h"
-#include "gear_stick.h"
-#include "handbrake.h"
-#include "ignition.h"
+#include "accelerator.hpp"
+#include "clutch.hpp"
+#include "gear_stick.hpp"
+#include "handbrake.hpp"
+#include "ignition.hpp"
 
 
 CarFacade::CarFacade() {}
 
-CarFacade::~CarFacade() {}
-
 void CarFacade::drive()
 {
-  Ignition ignition = Ignition();
-  Clutch clutch = Clutch();
-  Accelerator accelerator = Accelerator();
-  GearStick gearStick = GearStick();
-  Handbrake handbrake = Handbrake();
+  Ignition ignition;
+  Clutch clutch;
+  Accelerator accelerator;
+  GearStick gearStick;
+  Handbrake handbrake;
 
   ignition.turnOn();
   clutch.press();

@@ -1,12 +1,10 @@
-#include "dropdown_buttons.h"
-
 #include <iostream>
+
+#include "dropdown_buttons.hpp"
 
 
 //DropdownButton
 DropdownButton::DropdownButton() {}
-
-DropdownButton::~DropdownButton() {}
 
 void DropdownButton::draw()
 {
@@ -17,8 +15,6 @@ void DropdownButton::draw()
 //LargeCheckboxButton
 LargeDropdownButton::LargeDropdownButton()
 : DropdownButton() {}
-
-LargeDropdownButton::~LargeDropdownButton() {}
 
 void LargeDropdownButton::draw()
 {
@@ -31,8 +27,6 @@ void LargeDropdownButton::draw()
 MediumDropdownButton::MediumDropdownButton()
 : DropdownButton() {}
 
-MediumDropdownButton::~MediumDropdownButton() {}
-
 void MediumDropdownButton::draw()
 {
   std::cout << "Setting size to medium..." << std::endl;
@@ -43,8 +37,6 @@ void MediumDropdownButton::draw()
 //SmallDropdownButton
 SmallDropdownButton::SmallDropdownButton()
 : DropdownButton() {}
-
-SmallDropdownButton::~SmallDropdownButton() {}
 
 void SmallDropdownButton::draw()
 {

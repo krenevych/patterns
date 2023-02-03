@@ -1,21 +1,23 @@
-#include "suv.h"
+#include "suv.hpp"
 
 
-SUV::SUV(std::string mark, int power, int torque, bool isAWD)
+SUV::SUV(std::string const& mark, int power, int torque, bool isAWD)
 : Car(mark, power, torque), isAWD(isAWD) {}
 
-SUV::SUV(SUV const* other)
-: Car(other), isAWD(this->isAWD) {}
+SUV::SUV(SUV const& other)
+: Car(other), isAWD(other.isAWD) {}
 
 SUV* SUV::clone() const
 {
-  return new SUV(this);
+  return new SUV(*this);
 }
 
-std::string SUV::toString() const
+std::ostream& operator<<(std::ostream& os, SUV const& suv)
 {
-  return "SUV{" +
-         this->Car::toString() +
-         ", isAWD=" + (isAWD ? "true" : "false") +
-         "}";
+  os << "SUV{"
+     << static_cast<Car const&>(suv)
+     << ", isAWD=" << (suv.isAWD ? "true" : "false")
+     << "}";
+
+  return os;
 }

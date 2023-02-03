@@ -1,17 +1,17 @@
-#include "beverages.h"
+#include "beverages.hpp"
 
 
 //Beverage
-std::string Beverage::toString() const
+std::ostream& operator<<(std::ostream& os, Beverage const& beverage)
 {
-  return "Beverage: " + this->description() + ", $" + std::to_string(this->cost());
+  os << "Beverage: " << beverage.description() << ", $" << beverage.cost();
+
+  return os;
 }
 
 
 //DarkRoast
 DarkRoast::DarkRoast() {}
-
-DarkRoast::~DarkRoast() {}
 
 std::string DarkRoast::description() const
 {
@@ -27,8 +27,6 @@ float DarkRoast::cost() const
 //Decaf
 Decaf::Decaf() {}
 
-Decaf::~Decaf() {}
-
 std::string Decaf::description() const
 {
   return "Decaf";
@@ -42,8 +40,6 @@ float Decaf::cost() const
 
 //Espresso
 Espresso::Espresso() {}
-
-Espresso::~Espresso() {}
 
 std::string Espresso::description() const
 {

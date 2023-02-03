@@ -4,8 +4,6 @@
 Wheel::Wheel(int diameter)
 : diameter(diameter), material(Wheel::Material::Steel) {}
 
-Wheel::~Wheel() {}
-
 std::ostream &operator<<(std::ostream& os, Wheel const& wheel)
 {
   os << "Wheel{material=";

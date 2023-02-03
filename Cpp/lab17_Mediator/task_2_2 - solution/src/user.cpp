@@ -1,7 +1,7 @@
+#include <iostream>
+
 #include "user.hpp"
 #include "chat.hpp"
-
-#include <iostream>
 
 
 ConcreteUser::ConcreteUser(std::string const& userId)

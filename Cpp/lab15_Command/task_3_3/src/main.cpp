@@ -1,5 +1,3 @@
-#include <cstddef>
-
 #include "television.hpp"
 #include "remote_controller.hpp"
 
@@ -8,11 +6,11 @@ int main()
 {
   Device* tv = new Television();
 
-  RemoteController controller = RemoteController();
+  RemoteController controller;
 
   controller.deviceOn();
 
-  for (size_t ind = 0; ind != 30; ++ind)
+  for (int ind = 0; ind != 30; ++ind)
   {
       controller.deviceNextChanel();
   }

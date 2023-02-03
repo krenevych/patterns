@@ -1,12 +1,10 @@
-#include "control_sizes.h"
-
 #include <iostream>
+
+#include "control_sizes.hpp"
 
 
 //LargeControlSize
 LargeControlSize::LargeControlSize() {}
-
-LargeControlSize::~LargeControlSize() {}
 
 void LargeControlSize::applySize()
 {
@@ -16,8 +14,6 @@ void LargeControlSize::applySize()
 //MediumControlSize
 MediumControlSize::MediumControlSize() {}
 
-MediumControlSize::~MediumControlSize() {}
-
 void MediumControlSize::applySize()
 {
   std::cout << "Setting size to medium..." << std::endl;
@@ -25,8 +21,6 @@ void MediumControlSize::applySize()
 
 //SmallControlSize
 SmallControlSize::SmallControlSize() {}
-
-SmallControlSize::~SmallControlSize() {}
 
 void SmallControlSize::applySize()
 {

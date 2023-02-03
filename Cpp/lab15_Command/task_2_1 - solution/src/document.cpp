@@ -1,6 +1,6 @@
-#include "document.hpp"
-
 #include <iostream>
+
+#include "document.hpp"
 
 
 Document::Document(std::string const& name)
@@ -8,8 +8,6 @@ Document::Document(std::string const& name)
 {
   std::cout << "Creating new document " << this->name << std::endl;
 }
-
-Document::~Document() {}
 
 void Document::save()
 {

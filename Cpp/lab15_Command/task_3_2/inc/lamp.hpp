@@ -7,7 +7,6 @@ class Lamp
 public:
   Lamp(std::string const&);
   Lamp();
-  ~Lamp();
   void lightOn();
   void lightOff();
 

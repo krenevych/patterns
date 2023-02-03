@@ -1,20 +1,18 @@
-#include "tea.h"
-
 #include <iostream>
+
+#include "tea.hpp"
 
 
 //Tea
 Tea::Tea(int sugar)
 : Beverage(sugar) {}
 
-Tea::~Tea() {}
-
 void Tea::prepare()
 {
   std::cout << "Put some tea..." << std::endl;
 }
 
-int Tea::cost()
+int Tea::cost() const
 {
   return 7;
 }
@@ -23,8 +21,6 @@ int Tea::cost()
 //BlackTee
 BlackTea::BlackTea(int sugar, int waterVolume)
 : Tea(sugar), waterVolume(waterVolume) {}
-
-BlackTea::~BlackTea() {}
 
 void BlackTea::prepare()
 {
@@ -36,7 +32,7 @@ void BlackTea::prepare()
   }
 }
 
-int BlackTea::cost()
+int BlackTea::cost() const
 {
   return this->Tea::cost();
 }
@@ -51,8 +47,6 @@ void BlackTea::drink()
 TeaWithMilk::TeaWithMilk(int sugar, int milkVolume)
 : Tea(sugar), milkVolume(milkVolume) {}
 
-TeaWithMilk::~TeaWithMilk() {}
-
 void TeaWithMilk::prepare()
 {
   this->Tea::prepare();
@@ -63,7 +57,7 @@ void TeaWithMilk::prepare()
   }
 }
 
-int TeaWithMilk::cost()
+int TeaWithMilk::cost() const
 {
   return this->Tea::cost() + static_cast<int>(milkVolume / 20.0);
 }

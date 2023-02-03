@@ -6,7 +6,7 @@ class Item
 {
 public:
   Item(std::string const&, int);
-  std::string getName() const;
+  std::string const& getName() const;
   int getQuantity() const;
 
 private:

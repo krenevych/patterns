@@ -1,6 +1,6 @@
-#include "beverages.h"
-
 #include <iostream>
+
+#include "beverages.hpp"
 
 
 int main()
@@ -8,10 +8,10 @@ int main()
   using namespace std;
 
   Beverage* espresso = new Espresso();
-  cout << espresso->toString() << endl;
+  cout << *espresso << endl;
 
   Beverage* darkRoast = new DarkRoast();
-  cout << darkRoast->toString() << endl;
+  cout << *darkRoast << endl;
 
   return 0;
 }

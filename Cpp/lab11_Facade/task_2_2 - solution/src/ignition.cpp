@@ -1,11 +1,9 @@
-#include "ignition.h"
-
 #include <iostream>
+
+#include "ignition.hpp"
 
 
 Ignition::Ignition() {}
-
-Ignition::~Ignition() {}
 
 void Ignition::turnOn()
 {

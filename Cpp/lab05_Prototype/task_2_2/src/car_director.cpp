@@ -1,9 +1,7 @@
-#include "car_director.h"
+#include "car_director.hpp"
 
 
 CarDirector::CarDirector() {}
-
-CarDirector::~CarDirector() {}
 
 void CarDirector::setCarBuilder(CarBuilder* carBuilder)
 {

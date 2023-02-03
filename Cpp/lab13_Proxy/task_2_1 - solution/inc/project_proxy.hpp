@@ -7,8 +7,7 @@
 class ProjectProxy: public Project
 {
 public:
-  ProjectProxy(std::string);
-  ~ProjectProxy();
+  ProjectProxy(std::string const&);
   void run();
 
 private:

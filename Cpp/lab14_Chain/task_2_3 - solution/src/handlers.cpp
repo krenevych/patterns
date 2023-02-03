@@ -1,13 +1,11 @@
-#include "handlers.hpp"
+#include <boost/date_time/gregorian/gregorian.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
 
-#include "boost/date_time/gregorian/gregorian.hpp"
-#include "boost/date_time/posix_time/posix_time.hpp"
+#include "handlers.hpp"
 
 
 //PropertyHandler
 PropertyHandler::PropertyHandler() {}
-
-PropertyHandler::~PropertyHandler() {}
 
 void PropertyHandler::setProperty(Image& image)
 {
@@ -26,8 +24,6 @@ void PropertyHandler::setNext(Handler* handler)
 PropertyHandlerCamera::PropertyHandlerCamera(std::string const& cameraName)
 : cameraName(cameraName) {}
 
-PropertyHandlerCamera::~PropertyHandlerCamera() {}
-
 void PropertyHandlerCamera::setProperty(Image& image)
 {
   image.setCamera(this->cameraName);
@@ -36,8 +32,6 @@ void PropertyHandlerCamera::setProperty(Image& image)
 
 //PropertyHandlerDateTime
 PropertyHandlerDateTime::PropertyHandlerDateTime() {}
-
-PropertyHandlerDateTime::~PropertyHandlerDateTime() {}
 
 void PropertyHandlerDateTime::setProperty(Image& image)
 {
@@ -57,8 +51,6 @@ void PropertyHandlerDateTime::setProperty(Image& image)
 //PropertyHandlerName
 PropertyHandlerName::PropertyHandlerName() {}
 
-PropertyHandlerName::~PropertyHandlerName() {}
-
 void PropertyHandlerName::setProperty(Image& image)
 {
   std::string creationDate = image.getCreationDate();
@@ -74,8 +66,6 @@ void PropertyHandlerName::setProperty(Image& image)
 //PropertyHandlerType
 PropertyHandlerType::PropertyHandlerType(Image::Type const type)
 : type(type) {}
-
-PropertyHandlerType::~PropertyHandlerType() {}
 
 void PropertyHandlerType::setProperty(Image& image)
 {

@@ -12,7 +12,7 @@ public:
   size_t size() const;
   int at(size_t) const;
   std::vector<int> const& getArray() const;
-  IntegerIterator<CollectionIntegers> iterator() const;
+  IntegerIterator iterator() const;
 
   friend std::ostream& operator<<(std::ostream&, CollectionIntegers const&);
 

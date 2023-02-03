@@ -1,23 +1,23 @@
-#include "car.h"
+#include "car.hpp"
 
 
-Car::Car(std::string mark, int power, int torque)
+Car::Car(std::string const& mark, int power, int torque)
 : mark(mark), power(power), torque(torque) {}
 
-Car::Car(Car const* other)
-: mark(other->mark), power(other->power), torque(other->torque) {}
-
-Car::~Car() {}
+Car::Car(Car const& other)
+: mark(other.mark), power(other.power), torque(other.torque) {}
 
 Car* Car::clone() const
 {
-  return new Car(this);
+  return new Car(*this);
 }
 
-std::string Car::toString() const
+std::ostream& operator<<(std::ostream& os, Car const& car)
 {
-  return "Car{mark=" + this->mark +
-          ", power=" + std::to_string(this->power) +
-          ", torque=" + std::to_string(this->torque) +
-          '}';
+  os << "Car{mark=" << car.mark
+     << ", power=" << car.power
+     << ", torque=" << car.torque
+     << "}";
+
+  return os;
 }

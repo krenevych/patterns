@@ -11,7 +11,8 @@ int main()
 {
   using namespace std;
 
-  default_random_engine generator;
+  random_device dev;
+  mt19937 generator(dev());
   bernoulli_distribution bernoulli_distr(0.5);
   uniform_int_distribution<int> uniform_int_distr(0, 1000);
 
@@ -19,7 +20,7 @@ int main()
   Vehicle * vehicle;
   int randInt;
 
-  for (size_t ind = 0; ind != 12; ++ind)
+  for (int ind = 0; ind != 12; ++ind)
   {
     randInt = bernoulli_distr(generator);
     vehicle = vehicleFactory.getVehicle(randInt);

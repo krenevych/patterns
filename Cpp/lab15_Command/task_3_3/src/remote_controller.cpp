@@ -3,8 +3,6 @@
 
 RemoteController::RemoteController() {}
 
-RemoteController::~RemoteController() {}
-
 void RemoteController::deviceOn() {}
 
 void RemoteController::deviceOff() {}

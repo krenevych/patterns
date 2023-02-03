@@ -4,7 +4,7 @@
 Item::Item(std::string const& name, int quantity)
 : name(name), quantity(quantity) {}
 
-std::string Item::getName() const
+std::string const& Item::getName() const
 {
   return this->name;
 }

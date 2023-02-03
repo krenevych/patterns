@@ -1,9 +1,7 @@
-#include "book_collection.h"
+#include "book_collection.hpp"
 
 
 BookCollection::BookCollection() {}
-
-BookCollection::~BookCollection() {}
 
 void BookCollection::addFictionBook(FictionBook* fictionBook)
 {

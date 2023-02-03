@@ -1,11 +1,9 @@
-#include "gear_stick.h"
-
 #include <iostream>
+
+#include "gear_stick.hpp"
 
 
 GearStick::GearStick() {}
-
-GearStick::~GearStick() {}
 
 void GearStick::changeGear(int gear)
 {

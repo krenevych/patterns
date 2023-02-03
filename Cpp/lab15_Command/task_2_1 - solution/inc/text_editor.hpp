@@ -39,7 +39,6 @@ private:
   {
   public:
     SaveDocument(Document*&);
-    ~SaveDocument();
     void execute();
 
   private:
@@ -50,7 +49,6 @@ private:
   {
   public:
     PrintDocument(Document*&);
-    ~PrintDocument();
     void execute();
 
   private:
@@ -61,7 +59,6 @@ private:
   {
   public:
     ShowInfo(Document*&);
-    ~ShowInfo();
     void execute();
 
   private:

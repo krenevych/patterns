@@ -1,6 +1,6 @@
-#include "user.hpp"
-
 #include <iostream>
+
+#include "user.hpp"
 
 
 ConcreteUser::ConcreteUser(std::string const& userId)

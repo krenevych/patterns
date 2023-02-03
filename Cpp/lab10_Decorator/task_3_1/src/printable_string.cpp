@@ -1,12 +1,10 @@
-#include "printable_string.h"
-
 #include <iostream>
+
+#include "printable_string.hpp"
 
 
 PrintableString::PrintableString(std::string const& base)
 : base(base) {}
-
-PrintableString::~PrintableString() {}
 
 void PrintableString::print()
 {

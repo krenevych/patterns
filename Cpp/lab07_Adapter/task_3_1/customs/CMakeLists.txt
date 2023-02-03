@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 
 file(GLOB_RECURSE LIB_SOURCES src/*.cpp)
-file(GLOB_RECURSE LIB_INCLUDES inc/*.h)
+file(GLOB_RECURSE LIB_INCLUDES inc/*.hpp)
 
 message("LIB_SOURCES = ${LIB_SOURCES}")
 message("LIB_INCLUDES = ${LIB_INCLUDES}")

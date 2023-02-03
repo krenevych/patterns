@@ -3,6 +3,4 @@
 
 Button::Button() {}
 
-Button::~Button() {}
-
-void Button::click() const {}
+void Button::click() {}

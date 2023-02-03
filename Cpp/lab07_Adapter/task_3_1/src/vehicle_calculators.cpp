@@ -1,7 +1,7 @@
-#include "vehicle_calculators.h"
-
 #include <cassert>
 #include <cmath>
+
+#include "vehicle_calculators.hpp"
 
 
 //CarCalculator
@@ -9,9 +9,7 @@ int CarCalculator::averageCarPrice = 6000;
 
 CarCalculator::CarCalculator() {}
 
-CarCalculator::~CarCalculator() {}
-
-int CarCalculator::getRetailPrice()
+int CarCalculator::getRetailPrice() const
 {
   assert(this->vehicle != nullptr);
 
@@ -43,7 +41,7 @@ void CarCalculator::setVehicle(Vehicle const * vehicle)
 	this->vehicle = vehicle;
 }
 
-std::string CarCalculator::calculatePrice()
+std::string CarCalculator::calculatePrice() const
 {
   assert(this->vehicle != nullptr);
 	double price = this->vehicle->getDamage() * std::max(this->getRetailPrice() - (this->vehicle->getAge() * 100), 0);
@@ -56,14 +54,12 @@ int TruckCalculator::averagePrice = 10000;
 
 TruckCalculator::TruckCalculator() {}
 
-TruckCalculator::~TruckCalculator() {}
-
 void TruckCalculator::setVehicle(Vehicle const* vehicle)
 {
     this->vehicle = vehicle;
 }
 
-std::string TruckCalculator::calculatePrice()
+std::string TruckCalculator::calculatePrice() const
 {
   assert(this->vehicle != nullptr);
 	double price = std::max(-this->averagePrice + this->vehicle->getAge() * 100 + this->vehicle->getMileage() / 100, 0);

@@ -1,21 +1,19 @@
-#include "pizzas.h"
+#include "pizzas.hpp"
 
 
 //Pizza
 Pizza::Pizza() {}
 
-Pizza::~Pizza() {}
-
-std::string Pizza::toString() const
+std::ostream& operator<<(std::ostream& os, Pizza const& pizza)
 {
-  return "Pizza: " + this->description() + ", $" + std::to_string(this->cost());
+  os << "Pizza: " << pizza.description() << ", $" << pizza.cost();
+
+  return os;
 }
 
 
 //ThickCrustPizza
 ThickCrustPizza::ThickCrustPizza() {}
-
-ThickCrustPizza::~ThickCrustPizza() {}
 
 std::string ThickCrustPizza::description() const
 {
@@ -30,8 +28,6 @@ float ThickCrustPizza::cost() const
 
 //ThinCrustPizza
 ThinCrustPizza::ThinCrustPizza() {}
-
-ThinCrustPizza::~ThinCrustPizza() {}
 
 std::string ThinCrustPizza::description() const
 {

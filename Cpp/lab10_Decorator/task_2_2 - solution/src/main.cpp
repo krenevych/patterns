@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "pizzas.h"
-#include "toppings.h"
+#include "pizzas.hpp"
+#include "toppings.hpp"
 
 
 int main()
@@ -15,7 +15,7 @@ int main()
   pizza = new Peppers(pizza);
   pizza = new Olives(pizza);
 
-  cout << pizza->toString() << endl;
+  cout << *pizza << endl;
 
   return 0;
 }
